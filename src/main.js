@@ -1,0 +1,14 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+import axios from 'axios';
+import './js/header';
+import './js/about-me-section';
+import './js/animated-section';
+import './js/benefits-section';
+import './js/FAQ-section';
+import './js/hero-section';
+import './js/projects-section';
+import './js/reviews-section';
+import './js/footer';
