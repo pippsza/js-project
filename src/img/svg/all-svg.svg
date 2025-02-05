@@ -1,5 +1,15 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+<symbol id="icon-burger" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M4 11.333h24M4 20.667h24"></path>
+</symbol>
+<symbol id="icon-down-arrow" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M8 12l8 8 8-8"></path>
+</symbol>
+<symbol id="icon-left-arrow" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M26.666 16h-21.333"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M13.334 24l-8-8 8-8"></path>
+</symbol>
 <symbol id="icon-brush" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M17.037 20l-5.037-5.037"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M2.667 29.334c2.667 0 6.144 0.456 7.966-1.367s1.822-4.777 0-6.6-4.777-1.822-6.6 0c-1.822 1.822 0 5.3-1.367 7.967z"></path>
@@ -8,11 +18,11 @@
 <symbol id="icon-hourglass" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M24.217 2.667h-16.434c-0.617 0-1.117 0.5-1.117 1.117 0 3.554 1.412 6.962 3.925 9.475l1.626 1.626c0.161 0.161 0.242 0.242 0.3 0.32 0.352 0.473 0.352 1.121 0 1.594-0.058 0.077-0.139 0.158-0.3 0.32l-1.626 1.626c-2.513 2.513-3.925 5.921-3.925 9.475 0 0.617 0.5 1.117 1.117 1.117h16.434c0.617 0 1.117-0.5 1.117-1.117 0-3.554-1.412-6.962-3.925-9.475l-1.626-1.626c-0.161-0.161-0.242-0.242-0.3-0.32-0.353-0.473-0.353-1.121 0-1.594 0.058-0.077 0.139-0.158 0.3-0.32l1.626-1.626c2.513-2.513 3.925-5.921 3.925-9.475 0-0.617-0.5-1.117-1.117-1.117z"></path>
 </symbol>
-<symbol id="icon-next-arrow" viewBox="0 0 32 32">
+<symbol id="icon-right-arrow" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M5.333 16h21.333"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M18.666 8l8 8-8 8"></path>
 </symbol>
-<symbol id="icon-more-arrow" viewBox="0 0 32 32">
+<symbol id="icon-up-arrow" viewBox="0 0 32 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 20l-8-8-8 8"></path>
 </symbol>
 <symbol id="icon-message" viewBox="0 0 32 32">
