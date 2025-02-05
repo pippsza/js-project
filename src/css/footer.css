@@ -1,9 +1,38 @@
 .footer {
   padding: 20px 0;
+  background-color: #1c1d20;
 }
-.footer-desc {
-  text-align: center;
+.footer-title {
+  display: flex;
+  gap: 8px;
+  align-items: start;
 }
+.footer-logo {
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  float: left;
+}
+.span {
+  position: relative;
+  left: 50px;
+}
+.logo-text {
+  grid-column: 2;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.footer-accent-color {
+  color: var(--common-color);
+}
+
+/*
 .footer-link {
   position: relative;
 }
@@ -19,3 +48,9 @@
   background-color: #41d1ff;
   transition: 200ms ease;
 }
+@media screen {
+  .footer-desc {
+  text-align: center;
+}
+}
+*/
