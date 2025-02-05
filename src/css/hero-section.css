@@ -1,3 +1,165 @@
+/* Секція Hero */
+/* ----------- Мобільна версія (за замовчуванням) ----------- */
 .hero-section {
-  color: var(--common-color);
+  text-align: left;
+  color: white;
+  padding-top: 281px;
+  padding-bottom: 32px;
+}
+
+.hero {
+  background-color: #576f35;
+  padding: 0;
+}
+
+.hero-image-container {
+  padding: 0;
+}
+
+.hero-content {
+  color: #fff;
+  height: auto;
+  margin: 0 0 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.hero-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1.5px;
+  color: #fff;
+  text-align: left;
+  max-width: 335px;
+  height: 192px;
+  margin: 0 auto 20px auto;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  max-width: 335px;
+  max-height: 90px;
+  text-align: left;
+}
+.hero-image {
+  background-image: url(../img/hero/hero-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+  max-width: 375px;
+  height: 370px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-image {
+    background-image: url(../img/hero/hero-mobile@2x.jpg);
+  }
+}
+
+/* ----------- Версія для планшетів ----------- */
+
+@media only screen and (min-width: 768px) {
+  .hero {
+  }
+
+  .hero-section {
+  }
+  .hero-content {
+    height: 313px;
+    max-width: 768px;
+    margin: 0 auto 50px auto;
+    padding: 0 32px;
+  }
+
+  .hero-title {
+    font-size: 76px;
+    line-height: 76px;
+    letter-spacing: -1.5px;
+    color: #fff;
+    text-align: left;
+    max-width: 704px;
+    height: auto;
+    padding-top: 0;
+    margin: 0 0 25px 0;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 640px;
+  }
+
+  .hero-image {
+    background-image: url(../img/hero/hero-tablet.jpg);
+    max-width: 768px;
+    height: 539px;
+  }
+}
+/* Підтримка Retina для планшетів */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-image {
+    background-image: url(../img/img/Hero-desktop@2x.jpg);
+  }
+}
+
+/* ----------- Версія для десктопів ----------- */
+
+@media only screen and (min-width: 1280px) {
+  .hero {
+    display: flex;
+    padding: 0px;
+  }
+
+  .hero-section {
+    padding-top: 0;
+    margin-left: auto;
+  }
+
+  .hero-image-container {
+    margin: 0;
+    margin-left: 10px;
+    flex-grow: 1;
+  }
+
+  .hero-content {
+    max-width: 50%;
+    margin: 238px 28px 0 100px;
+    padding: 0;
+  }
+
+  .hero-title {
+    letter-spacing: -1.5px;
+    color: #fff;
+    text-align: left;
+    max-width: 502px;
+    max-height: 304px;
+    margin: 0 0 128px 0;
+  }
+
+  .hero-description {
+    max-width: 472px;
+    margin-right: 30px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .hero-image {
+    background-image: url(../img/hero/hero.jpg);
+    height: 800px;
+    background-size: cover;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-image {
+    background-image: url(../img/img/Hero-desktop@2x.jpg);
+  }
 }
