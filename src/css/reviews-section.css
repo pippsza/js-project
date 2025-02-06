@@ -1,0 +1,126 @@
+#reviews {
+  padding: 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+/* Стилі для контейнера слайдера */
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  list-style: none;
+  width: auto;
+}
+
+/* Стилі для кнопок */
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+/* Стилі для контенту відгуків */
+.review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 10px;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.review-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-text {
+  margin-top: 5px;
+}
+
+/* Додаткові стилі для контейнера слайдера */
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  list-style: none;
+  width: auto;
+}
+
+/* Стилі для кнопок керування слайдером */
+.swiper-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #000;
+}
+
+.icon use {
+  pointer-events: none;
+}
+
+@media (min-width: 375px) {
+  .swiper-slide {
+    width: 320px;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-slide {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .swiper-slide {
+    width: 800px;
+  }
+}
