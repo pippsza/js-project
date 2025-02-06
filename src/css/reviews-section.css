@@ -17,15 +17,23 @@
 .swiper-container {
   width: 100%;
   overflow: hidden;
+  background: #1c1d20;
 }
 
 .swiper-wrapper {
   display: flex;
+
+  gap: 32px;
 }
 
 .swiper-slide {
   list-style: none;
   width: auto;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 332px;
+  height: 302px;
 }
 
 /* Стилі для кнопок */
@@ -50,18 +58,24 @@
 }
 
 .review-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
   margin-bottom: 10px;
+  background: #e0e0e0, url('path_to_image');
 }
 
 .review-author {
-  font-weight: bold;
+  font: 600 20px / 1.5 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  color: #fafafa;
   margin-bottom: 5px;
 }
 
 .review-text {
+  font: 500 16px / 1.5 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
   margin-top: 5px;
 }
 

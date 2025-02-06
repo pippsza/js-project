@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1, // Мобільні пристрої (320px і більше)
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 2, // Планшети (768px і більше)
       },
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 4, // Десктоп (1440px і більше)
       },
     },
   });
