@@ -9,7 +9,7 @@
 @import url('./base.css');
 @import url('./container.css');
 /* libraries style */
-@import url('/node_modules/accordion-js/dist/accordion.min.css');
+@import url('../node_modules/accordion-js/dist/accordion.min.css');
 /* Sections style */
 @import url('./header.css');
 @import url('./modal-menu.css');
