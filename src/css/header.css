@@ -1,9 +1,6 @@
 .page-header {
   background: transparent;
-  transition: backdrop-filter 0.3s ease, background 0.3s ease;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -76,7 +73,7 @@
     color: #fafafa;
   border-radius: 60px;
   border-color: transparent;
-    padding: 24px 18px;
+    padding: 18px 24px;
     max-width: 163px;
     max-height: 55px;
     background: #ed3b44;
