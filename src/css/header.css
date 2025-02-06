@@ -14,6 +14,7 @@
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 .logo-container {
   display: flex;
@@ -28,7 +29,7 @@
   letter-spacing: -0.02em;
   color: #fafafa;
 }
-.dropdown-btn {
+.dropdown {
   display: none;
 }
 .btn-order-header {
@@ -38,23 +39,57 @@
   border: none;
   background-color: transparent;
   padding: 0;
-  stroke: black;
+  stroke: #fafafa;
 }
 .burger-icon {
   display: block;
   fill: none;
 }
-/* .btn-order-header {
+
+/* ----------- Версія для планшетів ----------- */
+
+@media screen and (min-width: 768px) {
+.logo-container {
+  margin-right: 151px;
+}
+  .dropdown {
+  display: block;
+  margin-right: 151px;
+  
+}
+.dropdown-btn {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fafafa;
+  padding: 10px;
+
+}
+.btn-order-header {
+  display: flex;
     font-size: 16px;
+    font-weight: 500;
     letter-spacing: -0.02em;
     color: #fafafa;
   border-radius: 60px;
   border-color: transparent;
-    padding: 18px 24px;
-    width: 163px;
-    height: 55px;
+    padding: 24px 18px;
+    max-width: 163px;
+    max-height: 55px;
     background: #ed3b44;
-} */
-.burger-icon {
-  display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+.burger-btn {
+  display: none;
+}
+}
+/* ----------- Версія для десктопів ----------- */
+
+@media screen and (min-width: 1440px) {
+  
 }
