@@ -1,19 +1,19 @@
 .page-header {
-      background: transparent;
-      transition: backdrop-filter 0.3s ease, background 0.3s ease;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      z-index: 999;
+  background: transparent;
+  transition: backdrop-filter 0.3s ease, background 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  z-index: 999;
 }
 .header-container {
   max-width: 1376px;
   margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 .logo-container {
   display: flex;
@@ -25,8 +25,8 @@
 }
 .descr-logo {
   font-size: 20px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
+  letter-spacing: -0.02em;
+  color: #fafafa;
 }
 .dropdown-btn {
   display: none;
@@ -34,11 +34,12 @@
 .btn-order-header {
   display: none;
 }
-/* .burger-btn {
+.burger-btn {
   border: none;
   background-color: transparent;
   padding: 0;
-} */
+  stroke: black;
+}
 .burger-icon {
   display: block;
   fill: none;
