@@ -11,6 +11,7 @@
 
 /* Sections style */
 @import url('./header.css');
+@import url('./modal-menu.css');
 @import url('./hero-section.css');
 @import url('./animated-section.css');
 @import url('./about-me-section.css');
