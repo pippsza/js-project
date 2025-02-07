@@ -4,7 +4,6 @@
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  z-index: 999;
 }
 .header-container {
   max-width: 1376px;
@@ -88,5 +87,12 @@
 /* ----------- Версія для десктопів ----------- */
 
 @media screen and (min-width: 1440px) {
+  .logo-container {
+      margin-right: 487px;
+    }
   
+    .dropdown {
+      margin-right: 487px;
+  
+    }
 }
