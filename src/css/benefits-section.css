@@ -28,7 +28,6 @@ ol {
   width: auto;
   max-width: 344px;
   height: 270px;
-  padding: 24px;
 
   background-color: #242527;
 }
@@ -119,5 +118,6 @@ ol {
   .benefits-list {
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin-left: auto;
   }
 }
