@@ -12,4 +12,54 @@
       <span class="footer-together-span">together</span>
     </h1>
   </div>
+  <form class="footer-form">
+    <label class="footer-form-label" for="user-email"
+      ><input
+        class="footer-form-input"
+        type="email"
+        id="user-email"
+        name="user-email"
+        placeholder="clients@gmail.com"
+        required
+      />
+      <p id="footer-error" class="error">Invalid email, try again</p>
+      <p id="footer-success" class="success">Succes!</p></label
+    >
+    <label class="footer-form-label" for="user-comments"
+      ><input
+        class="footer-form-input"
+        type="text"
+        id="user-comments"
+        name="user-comments"
+        placeholder="comments"
+        required
+    /></label>
+    <button class="footer-button" type="submit">Send</button>
+  </form>
+  <address class="footer-contacts">
+    <ul class="footer-contacts-list">
+      <li class="footer-contacts-item">
+        <a class="footer-contacts-link" href="mailto:lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+      <li class="footer-contacts-item">
+        <a class="footer-contacts-link" href="tel:+3801111111111"
+          >+380 11 1111 11 11</a
+        >
+      </li>
+    </ul>
+  </address>
+  <div id="modal-footer" class="modal-footer container">
+    <div class="modal-text">
+      <svg class="close-modal" width="14" height="14">
+        <use href="../img/svg/all-svg.svg#icon-close"></use>
+      </svg>
+      <h2>Thank you for your interest in cooperation!</h2>
+      <p>
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+    </div>
+  </div>
 </footer>
