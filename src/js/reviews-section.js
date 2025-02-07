@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 4, // Десктоп (1440px і більше)
       },
     },
+  });
+
+  // Зв'язок нових кнопок з функціями SwiperJS
+  document.getElementById('custom-prev').addEventListener('click', function () {
+    swiper.slidePrev();
+  });
+
+  document.getElementById('custom-next').addEventListener('click', function () {
+    swiper.slideNext();
   });
 
   axios
