@@ -37,6 +37,8 @@
 }
 
 /* Приховані стандартні кнопки Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after,
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
