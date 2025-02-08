@@ -1,5 +1,6 @@
 /* Секція Hero */
 /* ----------- Мобільна версія (за замовчуванням) ----------- */
+
 .hero-section {
   text-align: left;
   color: white;
@@ -13,26 +14,35 @@
 }
 .hero-button {
   border: none;
-
-  stroke: var(--theme-button);
+  transition: fill 0.3s ease;
+  fill: white;
   background: none;
 }
-.hero-link:hover + .hero-button {
+.hero-button:hover {
+  fill: var(--theme-button);
 }
 .theme-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .hero-link:first-child {
+  visibility: hidden;
+  pointer-events: none;
   position: absolute;
-  left: 32px;
-  stroke: none;
-  fill: white;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.hero-link:first-child:hover {
-  background-color: red;
-}
+
 .hero-h {
   font-weight: 500;
   font-size: 50px;
@@ -79,6 +89,7 @@
   align-items: center;
   width: 37px;
   height: 37px;
+  transition: all 0.3s ease;
   font-size: 14px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
@@ -102,7 +113,10 @@
 @media screen and (min-width: 768px) {
   .hero-image {
     background-image: url(../img/img/Hero-tablet.png);
-    max-width: 768px;
+    max-width: 100%;
+    height: 1024px;
+  }
+  .hero-image::before {
     height: 1024px;
   }
   .hero-list {
@@ -136,6 +150,28 @@
 /* ----------- Версія для десктопів ----------- */
 
 @media screen and (min-width: 1440px) {
+  .hero-link:first-child {
+    overflow: visible;
+    left: 32px;
+    stroke: none;
+    fill: white;
+    visibility: visible;
+    pointer-events: auto;
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    margin: 0;
+
+    padding: initial;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    white-space: normal;
+    clip-path: none;
+    clip: auto;
+  }
+  .hero-link:first-child:hover {
+    border-color: white;
+  }
   .hero-section {
     gap: 243px;
   }
@@ -143,15 +179,19 @@
     height: 900px;
   }
   .hero-image {
-    background-image: url(../img/img/Hero-desktop.png);
-    max-width: 1440px;
+    transition: background 1s ease-in-out, color 1s ease-in-out;
+    background-image: var(--common-image);
+    max-width: 100%;
     height: 900px;
     background-size: cover;
+  }
+  .hero-image::before {
+    height: 900px;
   }
 
   @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
     .hero-image {
-      background-image: url(../img/img/Hero-desktop@2x.png);
+      background-image: var(--retina-image);
     }
   }
 }
