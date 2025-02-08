@@ -12,6 +12,12 @@
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
+.reviews-title {
+  font: 600 16px / 1.5 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
 
 /* Стилі для контейнера слайдера */
 .swiper-container {
@@ -72,6 +78,11 @@
   cursor: not-allowed;
 }
 
+.custom-buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
 .icon {
   width: 24px;
   height: 24px;
@@ -121,7 +132,7 @@
 
 .swiper-slide {
   list-style: none;
-  width: auto;
+  width: 343px;
 }
 
 /* Стилі для кнопок керування слайдером */
