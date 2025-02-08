@@ -121,6 +121,7 @@
   }
   .hero-list {
     margin-left: auto;
+    gap: 8px;
   }
   .hero-section {
     gap: 187px;
