@@ -7,6 +7,7 @@
     opacity: 0;
     visibility: hidden; 
     pointer-events: none;
+    transition: transform 0.5s ease-in-out;
 }
 .mobile-menu.is-open {
     opacity: 1;
@@ -66,6 +67,7 @@
 .mobile-menu-item:focus {
     text-decoration-skip-ink: none;
         color: #ed3b44;
+        transition: transform 0.5s ease-in-out;
 }
 .btn-order-mobile-menu {
     display: flex;

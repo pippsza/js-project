@@ -62,6 +62,7 @@
   color: #fafafa;
   padding: 10px;
   cursor: pointer;
+  transition: transform 0.5s ease-in-out;
 }
 
 .dropdown-content {
