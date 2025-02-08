@@ -9,6 +9,10 @@ html {
 .red-theme {
   --common-color: #ed3b44;
   --common-hover: #e0373f;
+  --middle-gradient: #69292d;
+}
+.red-theme-button {
+  --theme-button: white;
 }
 body {
   transition: background-color 0.5s, color 0.5s;
@@ -17,15 +21,14 @@ body {
 
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
-  display: flex;
+
   background-color: #1c1d20;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  align-items: center;
-  flex-direction: column;
+
   min-width: 100vw;
   min-height: 100vh;
-  margin: 0;
+  margin: 0 auto;
 }
 
 main {
