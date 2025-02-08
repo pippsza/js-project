@@ -25,6 +25,22 @@
   background-position: center;
   max-width: 375px;
   height: 812px;
+  position: relative;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    #1c1d20 49.68%,
+    var(--middle-gradient) 67.73%,
+    var(--common-color) 100%
+  );
+  transform: rotate(-180deg);
+  width: 100vw;
+  height: 812px;
+  z-index: -1;
 }
 .hero-list {
   display: flex;
@@ -71,6 +87,9 @@
     gap: 187px;
     padding-top: 300px;
   }
+  .hero-section::before {
+    height: 1024px;
+  }
   .hero-link {
     width: 55px;
     height: 55px;
@@ -94,6 +113,9 @@
 @media screen and (min-width: 1440px) {
   .hero-section {
     gap: 243px;
+  }
+  .hero-section::before {
+    height: 900px;
   }
   .hero-image {
     background-image: url(../img/img/Hero-desktop.png);
