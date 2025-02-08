@@ -51,7 +51,6 @@
   .dropdown {
   display: block;
   margin-right: 151px;
-  
 }
 .dropdown-btn {
   font-size: 16px;
@@ -63,7 +62,28 @@
   color: #fafafa;
   padding: 10px;
   cursor: pointer;
+}
 
+.dropdown-content {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+    margin-top: 8px;
+}
+.menu-item-link {
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+.dropdown-content.show {
+  opacity: 1;
+  visibility: visible;
 }
 .btn-order-header {
   display: flex;

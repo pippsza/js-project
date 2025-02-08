@@ -5,8 +5,8 @@
     display: flex;
     justify-content: flex-end;
     opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+    visibility: hidden; 
+    pointer-events: none;
 }
 .mobile-menu.is-open {
     opacity: 1;
@@ -55,7 +55,6 @@
     gap: 12px;
     text-align: center;
     margin-top: 302px;
-
 }
 .mobile-menu-item {
     letter-spacing: -0.02em;
