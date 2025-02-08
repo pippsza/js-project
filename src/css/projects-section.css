@@ -18,9 +18,10 @@
 
 /*       norm           */
 
-.projects-section {
+.prj-container {
   width: auto;
 }
+
 .prj {
   width: 343px;
   height: 952px;
