@@ -20,6 +20,21 @@
     max-width: 375px;
     height: 812px;
 }
+.mobile-menu-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    /* right: 0;
+  left: 0; */
+    background: linear-gradient(90deg,
+            #1c1d20 49.68%,
+            var(--middle-gradient) 67.73%,
+            var(--common-color) 100%);
+    transform: rotate(-180deg);
+    width: 100vw;
+    height: 812px;
+    z-index: -1;
+}
 /* Поддержка Retina для мобильных устройств */
 @media (min-resolution: 192dpi),
 (min-device-pixel-ratio: 2) {
