@@ -62,6 +62,7 @@
   text-decoration-skip-ink: none;
   color: #fafafa;
   padding: 10px;
+  cursor: pointer;
 
 }
 .btn-order-header {

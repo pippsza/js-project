@@ -4,11 +4,9 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
-
-
-    /* opacity: 0;
+    opacity: 0;
         visibility: hidden;
-        pointer-events: none; */
+        pointer-events: none;
 }
 .mobile-menu.is-open {
     opacity: 1;
@@ -33,11 +31,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    overflow: auto;
     padding: 16px 32px;
+    padding-bottom: 64px;
     height: 100%;
     width: 100%;
-    overflow: auto;
     align-items: center;
 }
 
@@ -56,8 +54,8 @@
     flex-direction: column;
     gap: 12px;
     text-align: center;
-    margin-top: 242px;
-    margin-bottom: 289px;
+    margin-top: 302px;
+
 }
 .mobile-menu-item {
     letter-spacing: -0.02em;
@@ -85,11 +83,12 @@
         text-align: center;
         align-items: center;
         justify-content: center;
+        margin-top: 289px;
 }
 /* ----------- Версія для планшетів ----------- */
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .mobile-menu {
         display: none;
     }
-} */
+}
