@@ -1,5 +1,4 @@
 :root {
-  --common-color: #ed3b44;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -7,7 +6,15 @@
 html {
   scroll-behavior: smooth;
 }
+.red-theme {
+  --common-color: #ed3b44;
+  --common-hover: #e0373f;
+}
 body {
+  transition: background-color 0.5s, color 0.5s;
+  transition: background-image 0.5s, color 0.5s;
+  transition: color 0.5s, color 0.5s;
+
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   display: flex;
