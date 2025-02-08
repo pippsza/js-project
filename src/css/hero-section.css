@@ -17,6 +17,8 @@
   stroke: var(--theme-button);
   background: none;
 }
+.hero-link:hover + .hero-button {
+}
 .theme-button {
   display: flex;
   justify-content: center;
@@ -43,14 +45,17 @@
   background-image: url(../img/img/Hero-mobile.png);
   background-size: cover;
   background-position: center;
-  max-width: 375px;
+  margin: 0 auto;
   height: 812px;
+  width: 100%;
   position: relative;
 }
-.hero-section::before {
+.hero-image::before {
   content: '';
   position: absolute;
   top: 0;
+  /* right: 0;
+  left: 0; */
   background: linear-gradient(
     90deg,
     #1c1d20 49.68%,
