@@ -54,7 +54,9 @@
   border-radius: 24px;
   transition: opacity 0.5s ease-in-out;
 }
-
+.prj-list:last-child {
+  margin-bottom: 0;
+}
 .project-info {
   padding: 32px;
 
@@ -68,7 +70,7 @@
   border-radius: 0 0 24px 24px;
 }
 
-.tags-prj span {
+.tags-prj li {
   display: inline-flex;
   background-color: #fafafa;
   border: 1px solid rgba(28, 29, 32, 0.2);
@@ -84,7 +86,7 @@
 }
 
 .project-text {
-  margin-top: 90px;
+  /* margin-top: 90px; */
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 24px;
@@ -171,7 +173,7 @@
     height: 385px;
   }
 
-  .tags-prj span {
+  .tags-prj li {
     padding: 18px;
     margin-bottom: 0;
   }
