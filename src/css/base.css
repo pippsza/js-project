@@ -12,6 +12,7 @@ html {
   --middle-gradient: #69292d;
 }
 .red-theme-button {
+  --theme-button: white;
 }
 body {
   transition: background-color 0.5s, color 0.5s;

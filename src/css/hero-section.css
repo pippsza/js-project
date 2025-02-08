@@ -11,6 +11,26 @@
   padding-top: 281px;
   padding-bottom: 32px;
 }
+.hero-button {
+  border: none;
+
+  stroke: var(--theme-button);
+  background: none;
+}
+.theme-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-link:first-child {
+  position: absolute;
+  left: 32px;
+  stroke: none;
+  fill: white;
+}
+.hero-link:first-child:hover {
+  background-color: red;
+}
 .hero-h {
   font-weight: 500;
   font-size: 50px;
