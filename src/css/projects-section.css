@@ -54,14 +54,19 @@
   border-radius: 24px;
   transition: opacity 0.5s ease-in-out;
 }
+
 .prj-list:last-child {
   margin-bottom: 0;
 }
 .project-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 417px;
   padding: 32px;
-
   background-color: #fafafa;
   border-radius: 24px 24px 0 0;
+  align-content: space-between;
 }
 
 .project-image {
@@ -85,8 +90,15 @@
   flex-direction: column;
 }
 
+.prj-info-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+}
 .project-text {
-  /* margin-top: 90px; */
+  margin-bottom: 32px;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 24px;
@@ -97,10 +109,9 @@
 
 .see-project {
   display: inline-block;
-  margin-top: 32px;
   padding: 13px 32px;
   background-color: var(--common-color);
-  color: white;
+  color: #fafafa;
   border-radius: 60px;
   font-family: var(--font-family);
   font-weight: 500;
@@ -137,20 +148,14 @@
   display: flex;
   justify-content: center;
   margin-top: 32px;
+  flex-direction: row;
+  gap: 12px;
 }
 .button-prev-prj:disabled,
 .button-next-prj:disabled {
   cursor: not-allowed;
   stroke: #3b3b3b;
   border: 1px solid rgba(250, 250, 250, 0.2);
-}
-
-.button-prev-prj {
-  margin-right: 6px;
-}
-
-.button-next-prj {
-  margin-left: 6px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -162,6 +167,7 @@
   .project-info {
     padding: 64px;
     padding-right: 146px;
+    height: 566px;
   }
 
   .project-image {
@@ -169,6 +175,7 @@
   }
 
   .project-img {
+    max-width: max-content;
     width: 614px;
     height: 385px;
   }
@@ -180,9 +187,9 @@
 
   .project-text {
     width: 494px;
-    margin-top: 164px;
     font-size: 44px;
     line-height: 100%;
+    letter-spacing: -0.03em;
   }
 
   .see-project {
@@ -197,14 +204,7 @@
   }
   .prj-buttons {
     margin-top: 64px;
-  }
-
-  .button-prev-prj {
-    margin-right: 10px;
-  }
-
-  .button-next-prj {
-    margin-left: 10px;
+    gap: 20px;
   }
 
   .icon-prj {
@@ -220,16 +220,26 @@
   }
 
   .project {
+    display: flex;
     flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
   }
   .project-info {
-    padding: 64px;
+    width: 687px;
+    height: 625px;
     padding-right: 130px;
 
     border-radius: 24px 0 0 24px;
   }
 
+  .project-info-block {
+    height: 219px;
+  }
   .project-image {
+    display: flex;
+    align-items: center;
     padding: 120px 37px;
     border-radius: 0 24px 24px 0;
   }
@@ -237,9 +247,6 @@
   .project-img {
     width: 614px;
     height: 385px;
-  }
-  .project-text {
-    margin-top: 223px;
   }
 
   .slide-prj {
