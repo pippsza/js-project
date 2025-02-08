@@ -57,10 +57,25 @@
   color: white;
   padding: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .custom-buttons button:hover {
   background-color: #0056b3;
+}
+
+.custom-buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
 }
 
 /* Стилі для контенту відгуків */
