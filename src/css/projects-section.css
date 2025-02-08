@@ -17,6 +17,9 @@
 }
 
 /*       norm           */
+.projects-section {
+  display: flex;
+}
 
 .prj-container {
   width: auto;
@@ -106,6 +109,9 @@
 .see-project:hover,
 .see-project:focus {
   background-color: var(--common-hover);
+}
+.see-project:visited {
+  background-color: var(--common-color);
 }
 
 /*           buttons           */
