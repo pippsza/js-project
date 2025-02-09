@@ -54,6 +54,21 @@
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
   transition: transform 550ms ease-in-out;
+  box-sizing: border-box;
+  display: block;
+  flex-shrink: 0;
+  margin-left: 20px;
+  padding: 5px;
+  background-color: transparent;
+  fill: none;
+  stroke: #fafafa;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition: transform 550ms ease-in-out;
+}
+
+.is-active .faq-icon {
+  transform: rotate(540deg);
 }
 
 .faq-list .faq-panel {
@@ -70,6 +85,7 @@
 
 .faq-text {
   margin: 16px 0 0 0;
+  margin: 16px 40px 0 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -89,6 +105,11 @@
     width: 40px;
     height: 40px;
     padding: 7px;
+  }
+  .faq-icon {
+    width: 40px;
+    height: 40px;
+    /* padding: 7px; */
   }
 }
 
