@@ -25,12 +25,14 @@
 }
 .logo-container {
   display: flex;
-  margin-right: 143px;
+  width: 172px;
+  justify-content: space-between;
 }
 .logo-header {
   border-radius: 18px;
-  margin-right: 8px;
+    cursor: pointer;
 }
+
 .descr-logo {
   font-size: 20px;
   letter-spacing: -0.02em;
@@ -48,23 +50,15 @@
   padding: 0;
   stroke: #fafafa;
 }
-.burger-icon {
-  display: block;
-  fill: none;
-}
 .logo-nav {
   cursor: pointer;
 }
 /* ----------- Версія для планшетів ----------- */
 
 @media screen and (min-width: 768px) {
-
-.logo-container {
-  margin-right: 151px;
-}
+  
   .dropdown {
   display: block;
-  margin-right: 151px;
 }
 .dropdown-btn {
   font-size: 16px;
@@ -88,7 +82,7 @@
     gap: 5px;
     text-align: center;
     align-items: center;
-    margin-top: 8px;
+    padding-top: 8px;
 }
 .menu-item-link {
   cursor: pointer;
@@ -129,15 +123,4 @@
   display: none;
 }
 }
-/* ----------- Версія для десктопів ----------- */
 
-@media screen and (min-width: 1440px) {
-  .logo-container {
-      margin-right: 487px;
-    }
-  
-    .dropdown {
-      margin-right: 487px;
-  
-    }
-}
