@@ -1,63 +1,73 @@
 <footer class="footer container">
-  <div class="footer-title">
-    <img
-      class="footer-logo"
-      src="../img/img/logo.jpg"
-      width="44px"
-      height="44px"
-      alt="Foto Lloyd"
-    />
-    <h1 class="logo-text">
-      Let's <span class="footer-accent-color">work</span>
-      <span class="footer-together-span">together</span>
-    </h1>
-  </div>
-  <form class="footer-form">
-    <label class="footer-form-label" for="user-email"
-      ><input
-        class="footer-form-input"
-        type="email"
-        id="user-email"
-        name="user-email"
-        placeholder="clients@gmail.com"
-        required
-      />
-      <p id="footer-error" class="error">Invalid email, try again</p>
-      <p id="footer-success" class="success">Succes!</p></label
-    >
-    <label class="footer-form-label" for="user-comments"
-      ><input
-        class="footer-form-input"
-        type="text"
-        id="user-comments"
-        name="user-comments"
-        placeholder="comments"
-        required
-    /></label>
-    <button class="footer-button" type="submit">Send</button>
-  </form>
-  <address class="footer-contacts">
-    <ul class="footer-contacts-list">
-      <li class="footer-contacts-item">
-        <a class="footer-contacts-link" href="mailto:lloydjefferson@gmail.com"
-          >lloydjefferson@gmail.com</a
-        >
-      </li>
-      <li class="footer-contacts-item">
-        <a class="footer-contacts-link" href="tel:+3801111111111"
-          >+380 11 1111 11 11</a
-        >
-      </li>
-    </ul>
-  </address>
+  <div class="background-img"></div>
 
-  <div id="modal-footer" class="modal-footer container">
-    <div class="modal-text">
+  <div class="footer-content">
+    <div class="footer-title">
+      <img
+        class="footer-logo"
+        src="../img/img/logo.jpg"
+        width="44px"
+        height="44px"
+        alt="Foto Lloyd"
+      />
+      <h2 class="logo-text">
+        Let's <span class="footer-accent-color">work</span> together
+      </h2>
+    </div>
+
+    <form class="footer-form">
+      <div class="footer-form-item">
+        <label for="user-email"
+          ><input
+            class="footer-form-input"
+            type="email"
+            id="user-email"
+            name="user-email"
+            placeholder="clients@gmail.com"
+            required
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          />
+          <p id="footer-error" class="error">Invalid email, try again</p>
+          <p id="footer-success" class="success">Succes!</p></label
+        >
+        <label for="user-comments"
+          ><input
+            class="footer-form-input"
+            type="text"
+            id="user-comments"
+            name="user-comments"
+            placeholder="comments"
+            required
+        /></label>
+      </div>
+      <button class="footer-button" type="submit">Send</button>
+    </form>
+
+    <address class="footer-contacts">
+      <ul class="footer-contacts-list">
+        <li class="footer-contacts-item">
+          <a class="footer-contacts-link" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="footer-contacts-item">
+          <a class="footer-contacts-link" href="tel:+3801111111111"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+
+    <div id="modal-footer" class="modal-footer container">
       <svg class="close-modal" width="14" height="14">
         <use href="../img/svg/all-svg.svg#icon-close"></use>
       </svg>
-      <h2 id="modal-title"></h2>
-      <p id="modal-message"></p>
+      <div class="modal-text">
+        <h2 id="modal-title"></h2>
+        <p id="modal-message"></p>
+      </div>
     </div>
   </div>
+
+  <div class="overlay"></div>
 </footer>
