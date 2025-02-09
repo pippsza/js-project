@@ -30,7 +30,7 @@
 .hero-link:first-child {
   visibility: hidden;
   pointer-events: none;
-  position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -59,6 +59,7 @@
   height: 812px;
   width: 100%;
   position: relative;
+  margin-bottom: 64px;
 }
 .hero-image::before {
   content: '';
@@ -153,7 +154,7 @@
 @media screen and (min-width: 1440px) {
   .hero-link:first-child {
     overflow: visible;
-    left: 32px;
+
     stroke: none;
     fill: white;
     visibility: visible;
@@ -180,6 +181,7 @@
     height: 900px;
   }
   .hero-image {
+    margin-bottom: 96px;
     transition: background 1s ease-in-out, color 1s ease-in-out;
     background-image: var(--common-image);
     max-width: 100%;
