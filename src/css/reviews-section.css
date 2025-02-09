@@ -88,6 +88,32 @@
   height: 24px;
   fill: white;
 }
+.custom-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-button .icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.custom-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
 
 /* Стилі для контенту відгуків */
 .review-content {
