@@ -1,13 +1,16 @@
 // document.addEventListener("DOMContentLoaded", () => {
 //     const gallery = document.querySelector(".covers-gallery");
-
-//     const observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 gallery.classList.add("animate");
-//             }
-//         });
-//     }, { threshold: 0.2 });
-
-//     observer.observe(gallery);
+// const rows = document.querySelectorAll(".covers-list");
+// rows.forEach(row => {
+//     let shuffledImages = [...gallery, gallery[Math.floor(Math.random() * gallery.length)]]; // Додаємо випадкове повторення
+//     shuffledImages = shuffledImages.sort(() => Math.random() - 0.5); 
+// shuffledImages.forEach(img => {
+//       const li = document.createElement("li");
+//       li.classList.add("covers-item");
+//       li.innerHTML = <img src="${img}" />;
+//       row.appendChild(li);
+//     });
+//   });
 // });
+
+    
