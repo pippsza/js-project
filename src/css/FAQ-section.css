@@ -35,12 +35,16 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
+    background-color: transparent;
+}
+
+.faq-header-icon{
+    max-width: 90%;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: #fafafa;
-    background-color: transparent;
 }
 
 .faq-icon {
@@ -84,10 +88,6 @@
 
     .faq-item {
         padding: 32px 0;
-    }
-
-    .faq-item:last-child {
-        padding-bottom: 32px;
     }
 
     .faq-icon {
