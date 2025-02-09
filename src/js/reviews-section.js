@@ -37,8 +37,26 @@ document.addEventListener('DOMContentLoaded', function () {
     nextButton.disabled = swiper.isEnd;
   }
 
+  function setEqualHeight() {
+    const reviewItems = document.querySelectorAll('.swiper-slide');
+    let maxHeight = 0;
+
+    reviewItems.forEach(item => {
+      item.style.height = 'auto'; // Скинути висоту для перевірки фактичної висоти
+      const itemHeight = item.offsetHeight;
+      if (itemHeight > maxHeight) {
+        maxHeight = itemHeight;
+      }
+    });
+
+    reviewItems.forEach(item => {
+      item.style.height = `${maxHeight}px`;
+    });
+  }
+
   swiper.on('init', function () {
     updateButtonState();
+    setEqualHeight();
   });
 
   swiper.on('reachEnd', function () {
@@ -51,6 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   swiper.on('slideChange', function () {
     updateButtonState();
+  });
+
+  swiper.on('resize', function () {
+    setEqualHeight(); // Перевстановити висоту при зміні розміру вікна
   });
 
   document.getElementById('custom-prev').addEventListener('click', function () {
@@ -89,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       swiper.update();
+      setEqualHeight(); // Встановити рівну висоту після завантаження відгуків
       updateButtonState();
     })
     .catch(error => {
