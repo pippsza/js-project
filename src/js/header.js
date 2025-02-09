@@ -1,32 +1,3 @@
-// Відстеження події кліку на меню(випадаючий список) для планшетних і десктопних пристроїв
-
-const dropdownMenu = document.querySelector(".dropdown-content");
-const buttonMenu = document.querySelector(".dropdown-btn");
-const linksHeaderMenu = document.querySelectorAll(".mobile-item-link");
-
-buttonMenu.addEventListener('click', () => {
-    if(dropdownMenu.classList.contains('show')) {
-        dropdownMenu.classList.remove('show');
-    } else {
-        dropdownMenu.classList.add('show');
-    }
-});
-
-linksHeaderMenu.forEach(link => {
-    link.addEventListener("click", event => {
-        event.preventDefault();
-            const targetIdHeader = this.getAttribute("href"); // Отримуємо ID секції
-            const targetCorrectSection = document.querySelector(targetIdHeader);
-            if (targetCorrectSection) {
-                // Плавний скрол до секції
-                window.scrollTo({
-                    top: targetCorrectSection.offsetTop,
-                    behavior: "smooth"
-                });
-            }
-    });
-});
-
 const header = document.querySelector('.page-header');
 
 // Відстежуємо подію скролу
@@ -39,31 +10,42 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Відстеження події кліку на мобільне меню(клік на бургер та іконка закриття) для мобільних пристроїв
+// Відстеження події кліку на меню(випадаючий список) для планшетних і десктопних пристроїв
 
+const dropdownMenu = document.querySelector(".dropdown-content");
+const buttonMenu = document.querySelector(".dropdown-btn");
+const linksHeaderMenu = document.querySelectorAll(".menu-item-link");
+buttonMenu.addEventListener('click', () => {
+    dropdownMenu.classList.toggle("show");
+});
+ // Закриття меню при кліку на посилання
+    linksHeaderMenu.forEach(link => {
+        link.addEventListener("click", () => {
+            dropdownMenu.classList.remove("show");
+        });
+    });
+
+
+// Відстеження події кліку на мобільне меню(клік на бургер та іконка закриття) для мобільних пристроїв та закриття меню після переходу на секцію
+
+const linksModalMenu = document.querySelectorAll(".mobile-item-link");
 const burgerBtnMenu = document.querySelector(".burger-btn");
 const closeButtonMobMenu = document.querySelector(".close-btn-mob-menu");
 const modalMobMenu = document.querySelector(".mobile-menu");
-const linksModalMenu = document.querySelectorAll(".mobile-item-link");
-
-function toggleMenu() {
+const orderBtnMenu = document.querySelector(".btn-order-mobile-menu");
+    
+    function toggleMenu() {
         modalMobMenu.classList.toggle("is-open");
     }
-
 burgerBtnMenu.addEventListener('click', toggleMenu);
-closeButtonMobMenu.addEventListener('click', toggleMenu);
-
-linksModalMenu.forEach(link => {
-    link.addEventListener("click", event => {
-        event.preventDefault();
-            const targetId = this.getAttribute("href"); // Отримуємо ID секції
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                // Плавний скрол до секції
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: "smooth"
-                });
-            }
+    closeButtonMobMenu.addEventListener('click', toggleMenu);
+    
+    // Закриття меню при кліку на посилання
+    linksModalMenu.forEach(link => {
+        link.addEventListener("click", () => {
+            modalMobMenu.classList.remove("is-open");
+        });
     });
+    orderBtnMenu.addEventListener('click', () => {
+    modalMobMenu.classList.remove("is-open");
 });
