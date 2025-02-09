@@ -1,3 +1,5 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
     navigation: {

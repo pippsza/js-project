@@ -52,67 +52,52 @@
 
 /* Нові кнопки під слайдером */
 .custom-buttons {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 32px;
+  flex-direction: row;
   gap: 12px;
-  margin-top: 10px;
+  margin-top: 64px;
+  gap: 20px;
 }
 
-.custom-buttons button {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 10px;
+.button-custom-prev,
+.button-custom-next {
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.custom-buttons button:hover {
-  background-color: #0056b3;
-}
-
-.custom-buttons button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-}
-
-.icon {
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
   padding: 14px;
   width: 52px;
   height: 52px;
-  fill: white;
-}
-.custom-button {
-  background: none;
-  border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  border-radius: 50%;
-  transition: background-color 0.3s;
+  background-color: #1c1d20;
+  fill: none;
+  stroke: #fafafa;
 }
 
-.custom-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.custom-button .icon {
-  width: 24px;
-  height: 24px;
-  fill: #fff;
-}
-
-.custom-button:disabled {
-  background-color: #cccccc;
+.button-custom-prev:disabled,
+.button-custom-next:disabled {
   cursor: not-allowed;
+  stroke: #3b3b3b;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.button-custom-prev,
+.button-custom-next {
+  padding: 18px;
+  width: 68px;
+  height: 68px;
+}
+.custom-buttons {
+  margin-top: 64px;
+  gap: 20px;
+}
+.icon {
+  width: 32px;
+  height: 32px;
 }
 
 /* Стилі для контенту відгуків */
