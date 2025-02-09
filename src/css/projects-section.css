@@ -20,6 +20,7 @@
 .projects-section {
   display: flex;
   height: 952px;
+  margin-bottom: 96px;
 }
 
 .prj-container {
@@ -124,6 +125,7 @@
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
+  transition: 0.3s;
 }
 
 .see-project:hover,
@@ -157,6 +159,7 @@
   flex-direction: row;
   gap: 12px;
 }
+
 .button-prev-prj:disabled,
 .button-next-prj:disabled {
   cursor: not-allowed;
