@@ -1,9 +1,20 @@
 .page-header {
   background: transparent;
-  position: fixed;
+  position: absolute;
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.page-header.scrolled {
+  position: fixed;
+  border-radius: 20px;
+  border: 1px rgba(255, 255, 255, 0.295) solid;
+  background: rgba(255, 255, 255, 0.123);
+  /* Прозорий білий */
+  backdrop-filter: blur(8px);
+  /* Розмиття */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Тінь */
 }
 .header-container {
   max-width: 1376px;
@@ -41,10 +52,13 @@
   display: block;
   fill: none;
 }
-
+.logo-nav {
+  cursor: pointer;
+}
 /* ----------- Версія для планшетів ----------- */
 
 @media screen and (min-width: 768px) {
+
 .logo-container {
   margin-right: 151px;
 }
@@ -82,6 +96,12 @@
   letter-spacing: -0.02em;
   color: #fafafa;
 }
+.menu-item-link:hover,
+.menu-item-link:focus {
+  text-decoration-skip-ink: none;
+  color: #ed3b44;
+  transition: transform 0.5s ease-in-out;
+}
 .dropdown-content.show {
   opacity: 1;
   visibility: visible;
@@ -94,14 +114,17 @@
     color: #fafafa;
   border-radius: 60px;
   border-color: transparent;
-    padding: 18px 24px;
-    max-width: 163px;
-    max-height: 55px;
+  width: 163px;
+    height: 55px;
     background: #ed3b44;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 } 
+.btn-order-header:hover,
+.btn-order-header:focus {
+  background: #e0373f;
+}
 .burger-btn {
   display: none;
 }

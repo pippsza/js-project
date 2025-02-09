@@ -1,5 +1,6 @@
 .mobile-menu {
     position: fixed;
+    display: flex;
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,8 +18,6 @@
 .mobile-menu-image {
     background-image: url(../img/img/modal-mobile.png);
     background-size: cover;
-    max-width: 375px;
-    height: 812px;
 }
 .mobile-menu-image::before {
     content: '';
@@ -48,7 +47,7 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
-    padding: 16px 32px;
+    padding-top: 302px;
     padding-bottom: 64px;
     height: 100%;
     width: 100%;
@@ -70,36 +69,41 @@
     flex-direction: column;
     gap: 12px;
     text-align: center;
-    margin-top: 302px;
 }
-.mobile-menu-item {
+.mobile-item-link {
     letter-spacing: -0.02em;
         text-decoration: underline;
         text-decoration-skip-ink: none;
         color: #fafafa;
+        cursor: pointer;
 }
-.mobile-menu-item:hover,
-.mobile-menu-item:focus {
-    text-decoration-skip-ink: none;
+.mobile-item-link:hover,
+.mobile-item-link:focus {
         color: #ed3b44;
         transition: transform 0.5s ease-in-out;
 }
 .btn-order-mobile-menu {
     display: flex;
+
         font-size: 14px;
-        font-weight: 500;
         letter-spacing: -0.02em;
         color: #fafafa;
         border-radius: 60px;
         border-color: transparent;
-        padding: 18px 24px;
-        max-width: 163px;
-        max-height: 55px;
+        width: 164px;
+        height: 45px;
+        margin-top: 40px;
         background: #ed3b44;
         text-align: center;
         align-items: center;
         justify-content: center;
-        margin-top: 289px;
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+}
+.btn-order-mobile-menu:hover,
+.btn-order-mobile-menu:focus {
+    background: #e0373f;
+    transition: transform 0.5s ease-in-out;
 }
 /* ----------- Версія для планшетів ----------- */
 

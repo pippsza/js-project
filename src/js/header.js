@@ -2,6 +2,7 @@
 
 const dropdownMenu = document.querySelector(".dropdown-content");
 const buttonMenu = document.querySelector(".dropdown-btn");
+const linksHeaderMenu = document.querySelectorAll(".mobile-item-link");
 
 buttonMenu.addEventListener('click', () => {
     if(dropdownMenu.classList.contains('show')) {
@@ -9,6 +10,21 @@ buttonMenu.addEventListener('click', () => {
     } else {
         dropdownMenu.classList.add('show');
     }
+});
+
+linksHeaderMenu.forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault();
+            const targetIdHeader = this.getAttribute("href"); // Отримуємо ID секції
+            const targetCorrectSection = document.querySelector(targetIdHeader);
+            if (targetCorrectSection) {
+                // Плавний скрол до секції
+                window.scrollTo({
+                    top: targetCorrectSection.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+    });
 });
 
 const header = document.querySelector('.page-header');
