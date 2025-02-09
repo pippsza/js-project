@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.project');
     const nextButton = document.querySelector('.button-next-prj');
     const prevButton = document.querySelector('.button-prev-prj');
-    const projectLinks = document.querySelectorAll('.see-project-prj');
+    const projectLinks = document.querySelectorAll('.see-project');
 
     let currentSlide = 0;
     const totalSlides = slides.length;
