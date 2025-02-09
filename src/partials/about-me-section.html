@@ -1,63 +1,134 @@
 <section>
-  <h1>about-me-section</h1>
-
-  <div class="about-container">
+  <div class="container">
     <h2 class="visually-hidden">About Me</h2>
 
     <div class="about-text">
       <p class="about-description">
-        <span class="about-highlight">IMPRESSIVE</span> AND
-        <span class="about-highlight about-highlight-red">FUNCTIONAL</span>
-        I WORK WITH PEOPLE ALL OVER THE WORLD TO CREATE WEBSITES THAT REFLECT
-        EACH CLIENT'S UNIQUE PERSONALITY.
+        I work with people all over the world to create impressive and
+        <span class="about-highlight about-highlight-red">functional</span>
+        <span class="about-highlight">websites</span> that reflect each client's
+        unique personality.
       </p>
     </div>
 
-    <img
-      class="about-photo"
-      src="profile.jpg"
-      alt="Lloyd Jefferson working on a laptop"
-    />
+    <picture class="about-photo">
+      <source
+        srcset="../img/img/about-me-desktop.jpg"
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="../img/img/about-me-tablet.jpg"
+        media="(min-width: 768px)"
+      />
+      <img
+        src="../img/img/about-me-mobile.jpg"
+        alt="Lloyd Jefferson working on a laptop"
+      />
+    </picture>
 
-    <div class="about-info">
-      <p class="about-bio">
-        I am Lloyd Jefferson, a talented programmer with extensive expertise in
-        software development. I have an understanding of different programming
-        languages ​​and technologies, always ready to improve my skills. I
-        always follow the latest trends and look for unconventional, creative
-        solutions to problems. I have a high level of analytical skills and am
-        able to effectively solve even the most difficult tasks encountered on
-        the way.
-      </p>
-      <p>
-        Able to work both independently and in a team. I can effectively
-        cooperate with colleagues, exchanging ideas and finding optimal
-        solutions. Professional maturity allows you to calmly cope with
-        challenges and stressful situations, while maintaining a high quality of
-        work. I am always looking for opportunities for self-improvement. I
-        actively study new technologies and practices to stay abreast of the
-        latest innovations. I have a strong understanding of various programming
-        languages, frameworks and architectural concepts that allow me to create
-        efficient and scalable software.
-      </p>
-    </div>
+    <ul class="about-experience-list" id="accordion-container">
+      <li class="about-experience-list-element ac">
+        <div class="about-experience-list-header">
+          <h3 class="about-experience-list-titel ac-header">ABOUT ME</h3>
+          <div class="about-experience-list-logo-container ac-trigger">
+            <svg class="about-icon" width="18px" height="18px">
+              <use href="../img/svg/all-svg.svg#icon-down-arrow"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="ac-panel">
+          <p
+            class="about-experience-list-text about-experience-list-text-decoration"
+          >
+            I am Lloyd Jefferson, a talented programmer with extensive expertise
+            in software development. I have an understanding of different
+            programming languages ​​and technologies, always ready to improve my
+            skills. I always follow the latest trends and look for
+            unconventional, creative solutions to problems. I have a high level
+            of analytical skills and am able to effectively solve even the most
+            difficult tasks encountered on the way.
+          </p>
+          <p class="about-experience-list-text">
+            Able to work both independently and in a team. I can effectively
+            cooperate with colleagues, exchanging ideas and finding optimal
+            solutions. Professional maturity allows you to calmly cope with
+            challenges and stressful situations, while maintaining a high
+            quality of work. I am always looking for opportunities for
+            self-improvement. I actively study new technologies and practices to
+            stay abreast of the latest innovations. I have a strong
+            understanding of various programming languages, frameworks and
+            architectural concepts that allow me to create efficient and
+            scalable software.
+          </p>
+        </div>
+      </li>
+      <li class="about-experience-list-element ac">
+        <div class="about-experience-list-header">
+          <h3 class="about-experience-list-titel ac-header">ROLE</h3>
+          <div class="about-experience-list-logo-container ac-trigger">
+            <svg class="about-icon" width="18px" height="18px">
+              <use href="../img/svg/all-svg.svg#icon-down-arrow"></use>
+            </svg>
+          </div>
+        </div>
 
-    <div class="about-details">
-      <div class="about-section">
-        <h3 class="about-title">ROLE</h3>
-      </div>
+        <ul class="ac-panel">
+          <li class="about-experience-list-text">Frontend development</li>
+          <li class="about-experience-list-text">HeadlessCMS,Wordpress</li>
+          <li class="about-experience-list-text">Blender(enjoy)</li>
+        </ul>
+      </li>
+      <li class="about-experience-list-element ac">
+        <div class="about-experience-list-header">
+          <h3 class="about-experience-list-titel ac-header">EDUCATION</h3>
+          <div class="about-experience-list-logo-container ac-trigger">
+            <svg class="about-icon" width="18px" height="18px">
+              <use href="../img/svg/all-svg.svg#icon-down-arrow"></use>
+            </svg>
+          </div>
+        </div>
 
-      <div class="about-section">
-        <h3 class="about-title">EDUCATION</h3>
-      </div>
-    </div>
+        <ul class="ac-panel">
+          <li class="about-experience-list-text">
+            2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+          </li>
+          <li class="about-experience-list-text">
+            2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+            New York
+          </li>
+          <li class="about-experience-list-text">
+            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+          </li>
+        </ul>
+      </li>
+    </ul>
 
-    <div class="about-skills">
+    <!-- <div class="about-skills">
       <ul class="about-skills-list">
         <li class="about-skills-item about-skills-item-highlight">HTML/CSS</li>
         <li class="about-skills-item">JavaScript</li>
-        <li class="about-skills-item"></li>
+        <li class="about-skills-item">React</li>
       </ul>
+    </div> -->
+    <div class= "about-swiper-container swiper skills-swiper">
+      <ul class="about-swiper-list swiper-wrapper">
+        <li class="about-swiper-list-el swiper-slide skill-item active">HTML/CSS</li>
+        <li class="swiper-slide skill-item">JavaScript</li>
+        <li class="swiper-slide skill-item">React</li>
+        <li class="swiper-slide skill-item">Node.js</li>
+        <li class="swiper-slide skill-item">React Native</li>
+        <li class="swiper-slide skill-item">Soft skills</li>
+      </ul>
+
+      
+      <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
     </div>
   </div>
 </section>
