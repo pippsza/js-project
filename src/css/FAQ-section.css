@@ -10,6 +10,10 @@
     content: none;
 }
 
+/* .faq-container {
+   
+} */
+
 .faq-section {
     margin-bottom: 64px;
 }
@@ -44,9 +48,9 @@
 }
 
 .faq-icon {
+    box-sizing: border-box;
     display: block;
     flex-shrink: 0;
-    width: 34px;
     margin-left: 20px;
     padding: 5px;
     background-color: transparent;
