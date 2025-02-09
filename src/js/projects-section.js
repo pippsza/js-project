@@ -2,11 +2,11 @@ import '/main';
 import 'swiper/css/bundle';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sliderWrapper = document.querySelector('.swiper-wrapper');
-    const slides = document.querySelectorAll('.swiper-slide');
+    const sliderWrapper = document.querySelector('.slide-prj');
+    const slides = document.querySelectorAll('.project');
     const nextButton = document.querySelector('.button-next-prj');
     const prevButton = document.querySelector('.button-prev-prj');
-    const projectLinks = document.querySelectorAll('.see-project');
+    const projectLinks = document.querySelectorAll('.see-project-prj');
 
     let currentSlide = 0;
     const totalSlides = slides.length;
