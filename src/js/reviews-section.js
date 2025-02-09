@@ -1,5 +1,11 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import axios from 'axios';
+
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
     navigation: {
@@ -23,13 +29,40 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  // Зв'язок нових кнопок з функціями SwiperJS
+  function updateButtonState() {
+    const prevButton = document.getElementById('custom-prev');
+    const nextButton = document.getElementById('custom-next');
+
+    prevButton.disabled = swiper.isBeginning;
+    nextButton.disabled = swiper.isEnd;
+  }
+
+  swiper.on('init', function () {
+    updateButtonState();
+  });
+
+  swiper.on('reachEnd', function () {
+    updateButtonState();
+  });
+
+  swiper.on('reachBeginning', function () {
+    updateButtonState();
+  });
+
+  swiper.on('slideChange', function () {
+    updateButtonState();
+  });
+
   document.getElementById('custom-prev').addEventListener('click', function () {
-    swiper.slidePrev();
+    if (!swiper.isBeginning) {
+      swiper.slidePrev();
+    }
   });
 
   document.getElementById('custom-next').addEventListener('click', function () {
-    swiper.slideNext();
+    if (!swiper.isEnd) {
+      swiper.slideNext();
+    }
   });
 
   axios
@@ -46,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="review-content">
               <img src="${review.avatar_url}" alt="${review.author}'s avatar" class="review-avatar"/>
               <p class="review-author">${review.author}</p>
-              <p class="review-text">${review.review}</p> 
+              <p class="review-text">${review.review}</p>
             </div>
           `;
           reviewsList.appendChild(reviewItem);
@@ -54,6 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         reviewsList.innerHTML = '<li class="swiper-slide">Not found</li>';
       }
+
+      swiper.update();
+      updateButtonState();
     })
     .catch(error => {
       iziToast.error({
