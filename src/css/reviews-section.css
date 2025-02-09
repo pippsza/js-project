@@ -12,7 +12,6 @@
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
-
 .reviews-title {
   font: 600 16px / 1.5 'Inter Tight', sans-serif;
   letter-spacing: -0.02em;
@@ -29,7 +28,7 @@
 
 .swiper-wrapper {
   display: flex;
-  align-items: stretch; /* Розтягує слайди по висоті */
+  align-items: stretch;
   gap: 32px;
 }
 
@@ -39,7 +38,8 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
-  height: auto; /* Встановлюємо висоту автоматично */
+
+  height: auto;
 }
 
 /* Приховані стандартні кнопки Swiper */
@@ -60,19 +60,19 @@
 }
 
 .custom-buttons button {
-  background: none;
+  background-color: #007bff;
   border: none;
-  cursor: pointer;
+  color: white;
   padding: 10px;
-  border-radius: 50%;
-  transition: background-color 0.3s;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 }
 
 .custom-buttons button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #0056b3;
 }
 
 .custom-buttons button:disabled {
@@ -86,10 +86,33 @@
   padding: 14px;
   width: 52px;
   height: 52px;
+  fill: white;
+}
+.custom-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
 }
 
-.icon use {
-  pointer-events: none;
+.custom-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-button .icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.custom-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
 
 /* Стилі для контенту відгуків */
@@ -108,6 +131,7 @@
   width: 48px;
   height: 48px;
   margin-bottom: 10px;
+  background: #e0e0e0, url('path_to_image');
 }
 
 .review-author {
@@ -124,7 +148,33 @@
   margin-top: 5px;
 }
 
-/* Медійні запити для адаптивності */
+/* Додаткові стилі для контейнера слайдера */
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Стилі для кнопок керування слайдером */
+.swiper-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon use {
+  pointer-events: none;
+}
+
 @media (min-width: 375px) {
   .swiper-slide {
     width: 320px;
