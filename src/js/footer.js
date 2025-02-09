@@ -14,13 +14,13 @@ emailInput.addEventListener('input', function () {
   if (emailInput.checkValidity()) {
     emailInput.classList.add('valid');
     emailInput.classList.remove('invalid');
-    successMessage.style.display = 'block';
-    errorMessage.style.display = 'none';
+    successMessage.classList.add('show');
+    errorMessage.classList.remove('show');
   } else {
     emailInput.classList.remove('valid');
     emailInput.classList.add('invalid');
-    successMessage.style.display = 'none';
-    errorMessage.style.display = 'block';
+    successMessage.classList.remove('show');
+    errorMessage.classList.add('show');
   }
   if (emailInput.value === '') {
     successMessage.style.display = 'none';
