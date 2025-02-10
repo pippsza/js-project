@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       enabled: true,
       onlyInViewport: false,
     },
+    speed: 1000, // Тривалість анімації у мілісекундах (1 секунда)
     breakpoints: {
       320: {
         slidesPerView: 1, // Мобільні пристрої (320px і більше)
