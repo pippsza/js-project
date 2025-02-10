@@ -1,5 +1,3 @@
-
-
 .ac {
   border: none;
   padding: 0;
@@ -7,15 +5,12 @@
 }
 
 .ac .ac-trigger::after {
-  content: none;
+  content: '';
 }
 
 .about-text {
-  
-  
-  
   padding: 32px 32px 272px;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,20 +22,14 @@
 }
 
 .about-description {
-  font-size: clamp(16px, 4.5vw, 24px);
   line-height: 1.3;
   color: #ffffff;
   text-transform: uppercase;
 
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  max-width: 100%;
-  font-family: Inter Tight;
   font-weight: 500;
   font-size: 24px;
-  
-  letter-spacing: -3%;
+
+  letter-spacing: -0.03em;
 }
 
 .about-highlight {
@@ -69,11 +58,7 @@
   object-fit: cover;
 }
 
-
-
-
 /* Кнопки навігації */
-
 
 .about-scrol-btn {
   background-color: #1c1d20;
@@ -94,23 +79,29 @@
 .ac.is-active .about-icon {
   transform: rotate(180deg);
 }
-.about-experience-list .ac {
-  background-color: #242527;
-  border: none;
-}
-.ac {
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-}
-.about-experience-list-element .ac-heade {
-  background-color: #242527;
+.about-experience-list {
+
+  .about-experience-list-element {
+    background-color: #242527;
+    border: none;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    padding-bottom: 32px;
+    margin-bottom: 20px;
+  }
+
+  .ac .ac-trigger{
+
+  }
+
 }
 
+
+
 .about-experience-list-titel {
-  font-family: Inter Tight;
   font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -2%;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   color: #fafafa66;
 }
 .about-experience-list-header {
@@ -120,21 +111,19 @@
 }
 
 .about-experience-list .ac .ac-trigger {
-  display: inline-block;
   width: 36px;
   height: 36px;
-  content: none;
+  
 }
 .about-experience-list .ac .ac-trigger::after {
   display: none;
 }
 
 .about-experience-list-text {
-  font-family: Inter Tight;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -2%;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   color: #fafafa;
 }
 
@@ -172,9 +161,6 @@
   font-weight: bold;
 }
 
-
-
-
 .skill-item {
   width: 130px;
   min-height: 130px;
@@ -183,7 +169,6 @@
 
 /* Адаптивні стилі */
 @media only screen and (min-width: 768px) {
-
   .about-text {
     flex-direction: row;
     justify-content: space-between;
@@ -206,11 +191,9 @@
   .about-skills-list {
     justify-content: flex-start;
   }
-
 }
 
 @media only screen and (min-width: 1440px) {
-  
   .about-text {
     max-width: 1200px;
     margin: 0 auto;
