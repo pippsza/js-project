@@ -20,7 +20,7 @@
 .projects-section {
   display: flex;
   height: 952px;
-  margin-bottom: 96px;
+  margin-bottom: 64px;
 }
 
 .prj-container {
@@ -170,6 +170,7 @@
 @media only screen and (min-width: 768px) {
   .projects-section {
     height: 1379px;
+    margin-bottom: 96px;
   }
   .prj {
     width: 704px;
@@ -230,6 +231,7 @@
 @media only screen and (min-width: 1440px) {
   .projects-section {
     height: 813px;
+    margin-bottom: 164px;
   }
   .prj {
     width: 1376px;
