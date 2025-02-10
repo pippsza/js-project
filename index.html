@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JavaScript project</title>
-  <script type="module" crossorigin src="/js-project/index.js"></script>
-  <link rel="modulepreload" crossorigin href="/js-project/assets/vendor-P5jd7Mk4.js">
-  <link rel="stylesheet" crossorigin href="/js-project/assets/vendor-BNhT-OS8.css">
-  <link rel="stylesheet" crossorigin href="/js-project/assets/index-B5RI5bO9.css">
-</head>
 
-<body>
-  <header><h1>header</h1></header>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla App Template</title>
+    <script type="module" crossorigin src="/js-project/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/js-project/assets/vendor-P5jd7Mk4.js">
+    <link rel="stylesheet" crossorigin href="/js-project/assets/vendor-BNhT-OS8.css">
+    <link rel="stylesheet" crossorigin href="/js-project/assets/index-C_KiNiRp.css">
+  </head>
+  <body>
+    <header class="page-header">
+  <div class="container header-container">
+    <nav class="logo-container">
+      <a class="logo-nav" href="../index.html">
+      <img
+        class="logo-header"
+        srcset="../img/img/logo@2x.jpg 2x"
+        src="../img/img/logo.jpg"
+        alt="Lloyod Jefferson"
+        width="80"
+        height="80"
+      />
+    </a>
+      <p class="descr-logo">jefferson*</p>
+    </nav>
+    <div class="dropdown">
+      <button class="dropdown-btn" type="button">Menu</button>
+      <nav class="menu-nav">
+      <ul class="dropdown-content">
+        <li class="dropdown-menu-item"><a class="menu-item-link" href="#about-me-section">About me</a></li>
+        <li class="dropdown-menu-item"><a class="menu-item-link" href="#benefits-section">Benefits</a></li>
+        <li class="dropdown-menu-item"><a class="menu-item-link" href="#projects-section">Projects</a></li>
+        <li class="dropdown-menu-item"><a class="menu-item-link" href="#FAQ-section">FAQ</a></li>
+      </ul>
+      </nav>
+    </div>
+      <a class="btn-order-header" href="#order-project"> Order the project </a>
+    <button class="burger-btn" type="button">
+      <svg class="burger-icon" height="28" width="28">
+        <use href="../img/svg/all-svg.svg#icon-burger"></use>
+      </svg>
+    </button>
+  </div>
+</header>
 
-  <section><h1>FAQ-section</h1></section>
+    
+<div class="mobile-menu mobile-menu-image">
+        <button class="close-btn-mob-menu">
+        <svg class="close-mob-menu" width="28" height="28">
+            <use href="../img/svg/all-svg.svg#icon-close"></use>
+        </svg>
+    </button>
+    <div class="mobile-menu-container">
+        <nav class="mobile-menu-nav" id="nav">
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item"><a class="mobile-item-link" href="#about-me-section">About me</a></li>
+                <li class="mobile-menu-item"><a class="mobile-item-link" href="#benefits-section">Benefits</a></li>
+                <li class="mobile-menu-item"><a class="mobile-item-link" href="#projects-section">Projects</a></li>
+                <li class="mobile-menu-item"><a class="mobile-item-link" href="#FAQ-section">FAQ</a></li>
+            </ul>
+        </nav>
+    <a class="btn-order-mobile-menu" href="#order-project"> Order the project </a>
+    </div>
+</div>
+</div>
 
 
-  <main>
-    <section class="hero-image">
+
+    <main>
+      <section class="hero-image">
   <div class="hero-section container">
     <h1 class="hero-h">Hello.<br />I’m Fullstack developer Lloyd Jefferson.</h1>
     <ul class="hero-list">
@@ -50,9 +103,9 @@
   </div>
 </section>
 
-    <section><h1>about-me-section</h1></section>
+      <section><h1>about-me-section</h1></section>
 
-    <section class="benefits-container">
+      <section class="benefits-container">
   <div class="benefits container">
     <h2 class="benefits-title">Benefits of working with me</h2>
 
@@ -138,7 +191,7 @@
   </div>
 </section>
 
-    <section class="projects-section" id="projects-section">
+      <section class="projects-section" id="projects-section">
   <div class="prj-container container">
     <h2 class="title-prj">Projects</h2>
     <div class="swiper-container prj">
@@ -299,7 +352,7 @@
   </div>
 </section>
 
-    <!-- FAQ Section -->
+      <!-- FAQ Section -->
 <section class="faq-section">
   <div class="faq-container container">
     <h2 class="faq-title">FAQ</h2>
@@ -403,7 +456,7 @@
   </div>
 </section>
 
-    <section class="covers">
+      <section class="covers">
   <h1 class="visually-hidden">animated-section</h1>
 
   <div class="covers-content">
@@ -750,14 +803,13 @@
   </div>
 </section>
 
-    <section><h1>reviews-section</h1></section>
+      <section><h1>reviews-section</h1></section>
 
-  </main>
+    </main>
 
-  <footer><h1>footer</h1></footer>
+    <footer><h1>footer</h1></footer>
 
 
-</body>
-
+  </body>
 </html>
 
