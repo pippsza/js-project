@@ -10,11 +10,11 @@
 .benefits-container {
   margin-bottom: 64px;
 }
-ul,
+/* ul,
 ol {
   list-style-type: none;
   display: flex;
-}
+} */
 
 .benefits {
   display: flex;
@@ -27,7 +27,7 @@ ol {
 .benefits-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+
   margin-bottom: 32px;
   justify-content: center;
 }
