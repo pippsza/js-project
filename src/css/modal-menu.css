@@ -7,13 +7,14 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu.is-open {
   opacity: 1;
-  z-index: 9999;
+  z-index: 999;
   visibility: visible;
   pointer-events: auto;
 }
