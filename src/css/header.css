@@ -108,7 +108,7 @@
     border-color: transparent;
     width: 163px;
     height: 55px;
-    background: #ed3b44;
+    background: var(--common-color);
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -116,7 +116,7 @@
   }
   .btn-order-header:hover,
   .btn-order-header:focus {
-    background-color: #e0373f;
+    background-color: var(--common-hover);
   }
   .burger-btn {
     display: none;
