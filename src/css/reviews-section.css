@@ -35,7 +35,7 @@
 
 .swiper-slide {
   list-style: none;
-  max-width: 344px;
+  /*max-width: 344px;*/
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   height: auto;
@@ -145,7 +145,7 @@
   pointer-events: none;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .swiper-slide {
     flex: 0 0 100%; /* 1 картка на мобільних пристроях */
   }
