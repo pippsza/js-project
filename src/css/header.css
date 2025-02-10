@@ -3,7 +3,7 @@
   position: absolute;
   width: 100%;
   padding-top: 32px;
-
+  padding-left: 16px;
 }
 .page-header.scrolled {
   position: fixed;
@@ -18,7 +18,6 @@
 }
 .header-container {
   max-width: 1376px;
-  margin: 0 auto;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -56,7 +55,9 @@
 /* ----------- Версія для планшетів ----------- */
 
 @media screen and (min-width: 768px) {
-  
+  .page-header {
+    padding-left: 32px;
+  }
   .dropdown {
   display: block;
 }
