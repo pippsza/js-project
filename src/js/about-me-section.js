@@ -5,53 +5,81 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+// акордеон
 document.addEventListener("DOMContentLoaded", function () {
-    // Ініціалізація акордеону
     new Accordion("#accordion-container", {
         duration: 300,
         showMultiple: false,
         openOnInit: [0],
     });
 
-    // Ініціалізація Swiper
-    const swiper = new Swiper(".skills-swiper", {
+    const swiperContainer = document.querySelector(".about-swiper-container");
+    const scrollButton = document.querySelector(".about-scrol-btn");
+
+    if (!swiperContainer) {
+        console.error("не знайдено");
+        return;
+    }
+
+    const swiper = new Swiper(swiperContainer, {
         slidesPerView: "auto",
         spaceBetween: 16,
-        loop: false,
-        centeredSlides: false,
-        navigation: {
-            nextEl: ".swiper-button-next",
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
         keyboard: {
             enabled: true,
-            onlyInViewport: true,
+            onlyInViewport: false,
+            pageUpDown: false,
         },
-        simulateTouch: true,
-        touchRatio: 1,
-        grabCursor: true,
+        mousewheel: {
+            invert: false,
+        },
         breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-        },
-        on: {
-            slideChange: function () {
-                updateNavigationButton(this);
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
             },
-        },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            }
+        }
     });
 
-    function updateNavigationButton(swiper) {
-        const nextButton = document.querySelector(".swiper-button-next");
-
-        if (swiper.isEnd) {
-            nextButton.classList.add("disabled");
-            nextButton.setAttribute("disabled", "true");
-        } else {
-            nextButton.classList.remove("disabled");
-            nextButton.removeAttribute("disabled");
+    // клавіатура
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") {
+            swiper.slideNext();
+        } else if (event.key === "ArrowLeft") {
+            swiper.slidePrev();
         }
+    });
+
+    //  обробник кліку 
+    if (scrollButton) {
+        scrollButton.addEventListener("click", () => {
+            swiper.slideNext();
+        });
+    } else {
+        console.error("не знайдена");
     }
 
-    // Початковий стан кнопки
-    updateNavigationButton(swiper);
+    // прокручування
+    swiper.on("slideChange", () => {
+        document.querySelectorAll(".swiper-slide").forEach(slide => {
+            slide.classList.remove("active");
+        });
+        
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        if (activeSlide) {
+            activeSlide.classList.add("active");
+        }
+    });
 });

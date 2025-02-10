@@ -98,22 +98,27 @@ letter-spacing: -3%;
 }
 
 /* Кнопки навігації */
-.swiper-button-prev,
+
 .swiper-button-next {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.swiper-button-prev:hover,
+
 .swiper-button-next:hover {
     color: white;
 }
-
+.about-scrol-btn{
+    background-color: #1C1D20;
+    fill: none;
+    stroke: #3B3B3B;
+    border: none;
+    
+    
+}
 .about-icon{
     
     flex-shrink: 0;
-    margin-left: 20px;
     padding: 5px;
-    background-color: transparent;
     fill: none;
     stroke: #fafafa;
     border-radius: 50%;
@@ -210,13 +215,29 @@ color: #FAFAFA;
     color: #ffffff;
     font-weight: bold;
 }
+.about-swiper-container{
+    width: 100%;
+    overflow: hidden;
+}
+.about-swiper-content{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    overflow: hidden;
+}
 .about-swiper-list .swiper-slide{
     display: flex;
     width: 130px;
     height: 130px;
     border-radius: 50%;
 }
-
+.about-swiper-list{
+    flex-grow: 1;
+    
+    display: flex;
+    min-width: 0;
+}
 .swiper {
     width: 100%;
     overflow: hidden;
@@ -226,8 +247,16 @@ color: #FAFAFA;
     align-items: center;
   }
   .swiper-slide {
+    flex: 1 1 auto;
+    max-width: 50%; /* 🔹 Динамічна ширина (змінюється у JS) */
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    color: white;
     text-align: center;
-    cursor: pointer; 
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out; 
   }
   .skills-swiper {
     width: 100%;
@@ -294,6 +323,9 @@ color: #FAFAFA;
     .about-skills-list {
         justify-content: flex-start;
     }
+    .swiper-slide {
+        max-width: 33.33%;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -316,5 +348,8 @@ color: #FAFAFA;
 
     .about-skills-list {
         justify-content: flex-start;
+    }
+    .swiper-slide {
+        max-width: 25%;
     }
 }
