@@ -2,6 +2,7 @@
 /* ----------- Мобільна версія (за замовчуванням) ----------- */
 
 .hero-section {
+  box-sizing: content-box;
   text-align: left;
   color: white;
   display: flex;
