@@ -17,17 +17,17 @@
   font: 600 16px / 1.5 'Inter Tight', sans-serif;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.4);
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 /* Стилі для контейнера слайдера */
-.swiper-container {
+.reviews-container {
   width: 100%;
   overflow: hidden;
   background: #1c1d20;
 }
 
-.swiper-wrapper {
+.reviews-wrapper {
   display: flex;
   align-items: stretch;
   gap: 10px;
@@ -38,9 +38,8 @@
   max-width: 344px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
-  /*padding: 32px 24px;*/
   height: auto;
-  max-height: 322px; /* Встановіть максимальну висоту для карток */
+  max-height: 325px; /* Встановіть максимальну висоту для карток */
 }
 
 /* Приховані стандартні кнопки Swiper */
@@ -49,6 +48,16 @@
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Нові кнопки під слайдером */
@@ -66,7 +75,6 @@
   cursor: pointer;
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
-  padding: 14px;
   width: 52px;
   height: 52px;
   display: flex;
@@ -84,16 +92,6 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.button-custom-prev,
-.button-custom-next {
-  padding: 18px;
-  width: 68px;
-  height: 68px;
-}
-.custom-buttons {
-  padding-top: 64px;
-  gap: 20px;
-}
 .icon {
   width: 32px;
   height: 32px;
@@ -105,7 +103,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  /*padding: 10px;*/
   height: 100%; /* Розтягує вміст по висоті слайда */
   box-sizing: border-box; /* Враховує padding у розмірах елементів */
 }
@@ -133,15 +130,8 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   padding-left: 24px; /* Відступ зліва */
-  /*padding-top: 8px; /* Відступ зверху від імені */
   padding-right: 24px;
-  overflow: auto;
-}
-
-/* Додаткові стилі для контейнера слайдера */
-.swiper-container {
-  width: 100%;
-  overflow: hidden;
+  /*overflow: auto;*/
 }
 
 /* Стилі для кнопок керування слайдером */
@@ -151,23 +141,12 @@
   margin-top: 10px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .icon use {
   pointer-events: none;
 }
 
 @media (min-width: 375px) {
   .swiper-slide {
-    /*width: 320px;*/
     flex: 0 0 100%; /* 1 картка на мобільних пристроях */
   }
 }
