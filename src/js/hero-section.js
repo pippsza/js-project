@@ -9,9 +9,14 @@ const themes = [
 
 let currentThemeIndex = 0;
 const savedTheme = localStorage.getItem('selectedTheme');
+
 if (savedTheme && themes.includes(savedTheme)) {
   document.body.classList.add(savedTheme);
   currentThemeIndex = themes.indexOf(savedTheme);
+} else {
+  const defaultTheme = themes[0];
+  document.body.classList.add(defaultTheme);
+  localStorage.setItem('selectedTheme', defaultTheme);
 }
 
 document.getElementById('rollButton').addEventListener('click', () => {
