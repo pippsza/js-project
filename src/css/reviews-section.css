@@ -155,7 +155,7 @@
   .swiper-slide {
     /*width: 600px;*/
     flex: 0 0 50%; /* 2 картки на планшетах */
-    max-width: 375px;
+    max-width: 373px;
   }
 }
 
