@@ -3,11 +3,9 @@
   position: absolute;
   width: 100%;
   padding-top: 32px;
-  padding-left: 16px;
 }
 .page-header.scrolled {
   position: fixed;
-  border-radius: 20px;
   border: 1px rgba(255, 255, 255, 0.295) solid;
   background: rgba(255, 255, 255, 0.123);
   /* Прозорий білий */
@@ -17,7 +15,6 @@
   /* Тінь */
 }
 .header-container {
-  max-width: 1376px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -55,9 +52,6 @@
 /* ----------- Версія для планшетів ----------- */
 
 @media screen and (min-width: 768px) {
-  .page-header {
-    padding-left: 32px;
-  }
   .dropdown {
   display: block;
 }
