@@ -1,0 +1,200 @@
+/* Секція Hero */
+/* ----------- Мобільна версія (за замовчуванням) ----------- */
+
+.hero-section {
+  text-align: left;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 212px;
+  padding-top: 281px;
+  padding-bottom: 32px;
+}
+.hero-button {
+  border: none;
+  transition: fill 0.3s ease;
+  fill: white;
+  background: none;
+}
+.hero-button:hover {
+  fill: var(--theme-button);
+}
+.theme-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-link:first-child {
+  visibility: hidden;
+  pointer-events: none;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hero-h {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.hero-image {
+  background-image: url(../img/img/Hero-mobile.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  height: 812px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 64px;
+}
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  /* right: 0;
+  left: 0; */
+  background: linear-gradient(
+    90deg,
+    #1c1d20 49.68%,
+    var(--middle-gradient) 67.73%,
+    var(--common-color) 100%
+  );
+  transform: rotate(-180deg);
+  width: 100vw;
+  height: 812px;
+  z-index: -1;
+}
+.hero-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.hero-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+}
+.hero-link:hover {
+  border-color: white;
+}
+.hero-link:last-child {
+  width: 178px;
+}
+
+/* Поддержка Retina для мобильных устройств */
+@media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
+  .hero-image {
+    background-image: url(../img/img/Hero-mobile@2x.png);
+  }
+}
+
+/* ----------- Версія для планшетів ----------- */
+
+@media screen and (min-width: 768px) {
+  .hero-image {
+    background-image: url(../img/img/Hero-tablet.png);
+    max-width: 100%;
+    height: 1024px;
+  }
+  .hero-image::before {
+    height: 1024px;
+  }
+  .hero-list {
+    margin-left: auto;
+    gap: 8px;
+  }
+  .hero-section {
+    gap: 187px;
+    padding-top: 300px;
+  }
+  .hero-section::before {
+    height: 1024px;
+  }
+  .hero-link {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+  }
+  .hero-link:last-child {
+    width: 223px;
+  }
+  .hero-h {
+    font-size: 90px;
+  }
+  @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
+    .hero-image {
+      background-image: url(../img/img/Hero-tablet@2x.png);
+    }
+  }
+}
+
+/* ----------- Версія для десктопів ----------- */
+
+@media screen and (min-width: 1440px) {
+  .hero-link:first-child {
+    overflow: visible;
+
+    stroke: none;
+    fill: white;
+    visibility: visible;
+    pointer-events: auto;
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    margin: 0;
+
+    padding: initial;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    white-space: normal;
+    clip-path: none;
+    clip: auto;
+  }
+  .hero-link:first-child:hover {
+    border-color: white;
+  }
+  .hero-section {
+    gap: 243px;
+  }
+  .hero-section::before {
+    height: 900px;
+  }
+  .hero-image {
+    margin-bottom: 96px;
+    transition: background 1s ease-in-out, color 1s ease-in-out;
+    background-image: var(--common-image);
+    max-width: 100%;
+    height: 900px;
+    background-size: cover;
+  }
+  .hero-image::before {
+    height: 900px;
+  }
+
+  @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
+    .hero-image {
+      background-image: var(--retina-image);
+    }
+  }
+}

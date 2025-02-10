@@ -7,6 +7,61 @@
 html {
   scroll-behavior: smooth;
 }
+
+.red-theme {
+  --common-image: url(../img/img/Hero-desktop.png);
+  --retina-image: url(../img/img/Hero-desktop@2x.png);
+  --common-color: #ed3b44;
+  --common-hover: #e0373f;
+  --middle-gradient: #69292d;
+  --theme-button: #c6e327;
+}
+.lightGreen-theme {
+  --common-image: url(../img/img/Hero-lightGreen.png);
+  --retina-image: url(../img/img/Hero-lightGreen@2x.png);
+  --common-color: #c6e327;
+  --common-hover: #c0db28;
+  --middle-gradient: #596808;
+  --theme-button: #0041e8;
+}
+.blue-theme {
+  --common-image: url(../img/img/Hero-blue.png);
+  --retina-image: url(../img/img/Hero-blue@2x.png);
+  --common-color: #0041e8;
+  --common-hover: #0a41cc;
+  --middle-gradient: #001958;
+  --theme-button: #e6533c;
+}
+.orange-theme {
+  --common-image: url(../img/img/Hero-orange.png);
+  --retina-image: url(../img/img/Hero-orange@2x.png);
+  --common-color: #e6533c;
+  --common-hover: #e6533c;
+  --middle-gradient: #9F36268;
+  --theme-button: #2b4441;
+}
+.green-theme {
+  --common-image: url(../img/img/Hero-green.png);
+  --retina-image: url(../img/img/Hero-green@2x.png);
+  --common-color: #2b4441;
+  --common-hover: #1e3633;
+  --middle-gradient: #1e3633;
+  --theme-button: #ff7f08;
+}
+.yellow-theme {
+  --common-image: url(../img/img/Hero-yellow.png);
+  --retina-image: url(../img/img/Hero-yellow@2x.png);
+  --common-color: #ff7f08;
+  --common-hover: #ac5300;
+  --middle-gradient: #ac5300;
+  --theme-button: #ed3b44;
+}
+h1,
+p,
+a,
+button {
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
 body {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
