@@ -21,7 +21,6 @@ ol {
   flex-direction: column;
   justify-content: center;
   gap: 32px;
-  width: 344px;
 }
 
 .benefits-list {
@@ -110,10 +109,6 @@ ol {
     display: flex;
     gap: 16px;
     max-width: 704px;
-  }
-
-  .benefits {
-    width: 704px;
   }
 }
 
