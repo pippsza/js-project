@@ -40,7 +40,6 @@
   transition: transform 0.5s ease-in-out;
 }
 .title-prj {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -107,7 +106,6 @@
   gap: 32px;
 }
 .project-text {
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 24px;
   line-height: 117%;
@@ -131,9 +129,6 @@
 .see-project:hover,
 .see-project:focus {
   background-color: var(--common-hover);
-}
-.see-project:visited {
-  background-color: var(--common-color);
 }
 
 /*                              buttons                              */
