@@ -1,0 +1,142 @@
+.covers {
+  position: relative;
+  margin-bottom: 64px;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.covers-content {
+  position: relative;
+  display: block;
+  height: 508px;
+  /* background-image: url(../img/img/background1.png); */
+  background: radial-gradient(
+      circle at 30% 20%,
+      var(--common-color) -50px,
+      transparent 200px
+    ),
+    radial-gradient(
+      circle at -50% -30%,
+      var(--common-color) -50px,
+      transparent 200px
+    ),
+    radial-gradient(
+      circle at 95% 95%,
+      var(--common-color) -50px,
+      transparent 200px
+    );
+  background-size: cover;
+  background-position: center;
+}
+
+.covers-animation {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  overflow: hidden;
+}
+
+.covers-list {
+  display: grid;
+  grid-template-columns: repeat(10, 282px);
+  gap: 25px;
+  list-style: none;
+  transform: rotate(16deg);
+  padding-top: 0px;
+  margin: 0;
+  animation: coversAnimation 15s ease-in-out infinite;
+  margin-top: -100px;
+}
+
+.covers-animation-img {
+  width: 100%;
+  height: 162px;
+}
+
+.covers-item:nth-child(-n + 10),
+.covers-item:nth-child(n + 20):nth-child(-n + 30) {
+  transform: translateX(-150px);
+}
+
+@keyframes coversAnimation {
+  from {
+    transform: translateX(0%) rotate(16deg);
+  }
+
+  to {
+    transform: translateX(-20%) rotate(16deg);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .covers {
+    margin-bottom: 96px;
+  }
+
+  .covers-content {
+    height: 960px;
+    background: radial-gradient(
+        circle at 40% 10%,
+        var(--common-color) -50px,
+        transparent 200px
+      ),
+      radial-gradient(
+        circle at -30% 40%,
+        var(--common-color) -50px,
+        transparent 200px
+      ),
+      radial-gradient(
+        circle at 95% 70%,
+        var(--common-color) -50px,
+        transparent 200px
+      );
+  }
+
+  .covers-list {
+    grid-template-columns: repeat(10, 544px);
+    gap: 50px;
+    margin-top: -300px;
+  }
+
+  .covers-animation-img {
+    height: 314px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .covers {
+    margin-bottom: 162px;
+  }
+
+  .covers-content {
+    background: radial-gradient(
+        circle at 40% 10%,
+        var(--common-color) -50px,
+        transparent 200px
+      ),
+      radial-gradient(
+        circle at 10% 40%,
+        var(--common-color) -50px,
+        transparent 200px
+      ),
+      radial-gradient(
+        circle at 85% 70%,
+        var(--common-color) -50px,
+        transparent 200px
+      );
+  }
+}
