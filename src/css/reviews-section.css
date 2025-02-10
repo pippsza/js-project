@@ -35,7 +35,6 @@
 
 .swiper-slide {
   list-style: none;
-  /*max-width: 344px;*/
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   height: auto;
@@ -148,6 +147,7 @@
 @media (min-width: 320px) {
   .swiper-slide {
     flex: 0 0 100%; /* 1 картка на мобільних пристроях */
+    max-width: 365px;
   }
 }
 
@@ -155,6 +155,7 @@
   .swiper-slide {
     /*width: 600px;*/
     flex: 0 0 50%; /* 2 картки на планшетах */
+    max-width: 375px;
   }
 }
 
@@ -162,6 +163,6 @@
   .swiper-slide {
     /*width: 800px;*/
     flex: 0 0 25%; /* 4 картки на десктопах */
-    max-width: 332px;
+    max-width: 350px;
   }
 }
