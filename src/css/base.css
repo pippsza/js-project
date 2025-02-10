@@ -8,6 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .red-theme {
   --common-image: url(../img/img/Hero-desktop.png);
   --retina-image: url(../img/img/Hero-desktop@2x.png);
@@ -62,6 +63,7 @@ a,
 button {
   transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
+
 body {
   margin: 0 auto;
   font-family: 'Inter Tight', sans-serif;
