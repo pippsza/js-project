@@ -1,0 +1,234 @@
+
+
+.ac {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ac .ac-trigger::after {
+  content: none;
+}
+
+.about-text {
+  
+  
+  
+  padding: 32px 32px 272px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 24px;
+
+  background-color: #242527;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.about-description {
+  font-size: clamp(16px, 4.5vw, 24px);
+  line-height: 1.3;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  font-family: Inter Tight;
+  font-weight: 500;
+  font-size: 24px;
+  
+  letter-spacing: -3%;
+}
+
+.about-highlight {
+  font-weight: 600;
+  color: #6d6d6d;
+}
+
+.about-highlight-red {
+  color: #ed3b44;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 343px;
+  height: 500px;
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+
+
+
+/* Кнопки навігації */
+
+
+.about-scrol-btn {
+  background-color: #1c1d20;
+  fill: none;
+  stroke: #3b3b3b;
+  border: none;
+}
+.about-icon {
+  flex-shrink: 0;
+  padding: 5px;
+  fill: none;
+  stroke: #fafafa;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  transition: transform 550ms ease-in-out;
+}
+
+.ac.is-active .about-icon {
+  transform: rotate(180deg);
+}
+.about-experience-list .ac {
+  background-color: #242527;
+  border: none;
+}
+.ac {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+.about-experience-list-element .ac-heade {
+  background-color: #242527;
+}
+
+.about-experience-list-titel {
+  font-family: Inter Tight;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -2%;
+  color: #fafafa66;
+}
+.about-experience-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-experience-list .ac .ac-trigger {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  content: none;
+}
+.about-experience-list .ac .ac-trigger::after {
+  display: none;
+}
+
+.about-experience-list-text {
+  font-family: Inter Tight;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -2%;
+  color: #fafafa;
+}
+
+.about-experience-list-text-decoration {
+  margin-bottom: 32px;
+}
+
+.about-skills {
+  max-width: 343px;
+  margin-top: 32px;
+}
+
+.about-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.about-skills-item {
+  padding: 12px 24px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.about-skills-item-highlight {
+  background-color: #e74c3c;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+
+.skill-item {
+  width: 130px;
+  min-height: 130px;
+  padding: 0;
+}
+
+/* Адаптивні стилі */
+@media only screen and (min-width: 768px) {
+
+  .about-text {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-photo {
+    max-width: 500px;
+  }
+
+  .about-info {
+    font-size: 16px;
+  }
+
+  .about-details {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about-skills-list {
+    justify-content: flex-start;
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+  
+  .about-text {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-photo {
+    max-width: 600px;
+  }
+
+  .about-info {
+    font-size: 18px;
+  }
+
+  .about-skills-list {
+    justify-content: flex-start;
+  }
+  .about-experience-list-element {
+    max-width: 20%;
+    min-height: 200px;
+  }
+}

@@ -1,85 +1,83 @@
-import Accordion from "accordion-js";
-import "accordion-js/dist/accordion.min.css";
-import Swiper from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // акордеон
-document.addEventListener("DOMContentLoaded", function () {
-    new Accordion("#accordion-container", {
-        duration: 300,
-        showMultiple: false,
-        openOnInit: [0],
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  new Accordion('#accordion-container', {
+    duration: 300,
+    showMultiple: false,
+    openOnInit: [0],
+  });
 
-    const swiperContainer = document.querySelector(".about-swiper-container");
-    const scrollButton = document.querySelector(".about-scrol-btn");
+  const swiperContainer = document.querySelector('.about-slider');
+  const scrollButton = document.querySelector('.swiper-button-next');
 
-    if (!swiperContainer) {
-        console.error("не знайдено");
-        return;
+  if (!swiperContainer) {
+    console.error('не знайдено');
+    return;
+  }
+
+  const swiper = new Swiper(swiperContainer, {
+    navigation: {
+      nextEl: '.swiper-button-next',
+    },
+    slidesPerView: 2,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+   
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+      pageUpDown: false,
+    },
+    mousewheel: {
+      invert: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 6,
+      },
+    },
+  });
+
+  // клавіатура
+  document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight') {
+      swiper.slideNext();
+    } else if (event.key === 'ArrowLeft') {
+      swiper.slidePrev();
     }
+  });
 
-    const swiper = new Swiper(swiperContainer, {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-        loop: true,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-            pageUpDown: false,
-        },
-        mousewheel: {
-            invert: false,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 24,
-            }
-        }
+  //  обробник кліку
+  if (scrollButton) {
+    scrollButton.addEventListener('click', () => {
+      swiper.slideNext();
+    });
+  } else {
+    console.error('не знайдена');
+  }
+
+  // прокручування
+  swiper.on('slideChange', () => {
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      slide.classList.remove('active');
     });
 
-    // клавіатура
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowRight") {
-            swiper.slideNext();
-        } else if (event.key === "ArrowLeft") {
-            swiper.slidePrev();
-        }
-    });
-
-    //  обробник кліку 
-    if (scrollButton) {
-        scrollButton.addEventListener("click", () => {
-            swiper.slideNext();
-        });
-    } else {
-        console.error("не знайдена");
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    if (activeSlide) {
+      activeSlide.classList.add('active');
     }
-
-    // прокручування
-    swiper.on("slideChange", () => {
-        document.querySelectorAll(".swiper-slide").forEach(slide => {
-            slide.classList.remove("active");
-        });
-        
-        const activeSlide = swiper.slides[swiper.activeIndex];
-        if (activeSlide) {
-            activeSlide.classList.add("active");
-        }
-    });
+  });
 });
