@@ -1,5 +1,5 @@
 #reviews {
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 
 .visually-hidden {
@@ -148,7 +148,7 @@
 
 @media (min-width: 768px) {
   #reviews {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
 
   .swiper-slide {
@@ -160,7 +160,7 @@
 
 @media (min-width: 1440px) {
   #reviews {
-    margin-bottom: 164px;
+    padding-bottom: 164px;
   }
 
   .swiper-slide {
