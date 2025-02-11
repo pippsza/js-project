@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
       delay: 2000,
       disableOnInteraction: false,
     },
-   
+    
+    observeParents: true,
     keyboard: {
       enabled: true,
       onlyInViewport: false,
