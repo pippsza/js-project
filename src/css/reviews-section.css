@@ -1,5 +1,5 @@
 #reviews {
-  padding: 0px;
+  margin-bottom: 64px;
 }
 
 .visually-hidden {
@@ -147,6 +147,10 @@
 }
 
 @media (min-width: 768px) {
+  #reviews {
+    margin-bottom: 96px;
+  }
+
   .swiper-slide {
     /*width: 600px;*/
     flex: 0 0 50%; /* 2 картки на планшетах */
@@ -155,6 +159,10 @@
 }
 
 @media (min-width: 1440px) {
+  #reviews {
+    margin-bottom: 164px;
+  }
+
   .swiper-slide {
     /*width: 800px;*/
     flex: 0 0 25%; /* 4 картки на десктопах */
