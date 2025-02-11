@@ -42,8 +42,8 @@
   overflow: auto;
   gap: 289px;
   /* padding-top: 302px; */
-  padding-bottom: 64px;
-  justify-content: end;
+  padding: 64px 0;
+  justify-content: flex-end;
   align-items: center;
   z-index: 6665;
 }
