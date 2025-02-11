@@ -1,6 +1,3 @@
-* {
-  outline: 1px solid red !important;
-}
 .footer {
   position: relative;
 }
@@ -145,7 +142,6 @@
   color: #fafafa;
   border: none;
   background-color: var(--common-color);
-
   transition: background-color 0.8s ease;
 }
 .footer-button:hover,
