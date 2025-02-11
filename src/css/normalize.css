@@ -9,9 +9,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
+} /* Sections
    ========================================================================== */
 
 /**
@@ -21,7 +19,6 @@ html {
 body {
   margin: 0;
 }
-
 /**
  * Render the `main` element consistently in IE.
  */
@@ -34,14 +31,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-   ========================================================================== */
 
 /**
  * 1. Add the correct box sizing in Firefox.
