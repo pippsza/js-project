@@ -8,47 +8,41 @@ const overlayFooter = document.querySelector('.overlay');
 const modalFooterWindow = document.getElementById('modal-footer');
 const sendButton = document.querySelector('.footer-button');
 const form = document.querySelector('.footer-form');
+const closeButtonModal = document.querySelector('.close-modal');
 
-//Перевірка чи введено валідний email, виділення кольором і підпис
 emailInput.addEventListener('input', function () {
-  if (emailInput.checkValidity()) {
-    emailInput.classList.add('valid');
-    emailInput.classList.remove('invalid');
-    successMessage.classList.add('show');
-    errorMessage.classList.remove('show');
-  } else {
-    emailInput.classList.remove('valid');
-    emailInput.classList.add('invalid');
-    successMessage.classList.remove('show');
-    errorMessage.classList.add('show');
-  }
-  if (emailInput.value === '') {
+  const isValid = emailInput.checkValidity();
+
+  emailInput.classList.toggle('valid', isValid);
+  emailInput.classList.toggle('invalid', !isValid);
+  successMessage.classList.toggle('show', isValid);
+  errorMessage.classList.toggle('show', !isValid);
+
+  if (!emailInput.value) {
     successMessage.style.display = 'none';
     errorMessage.style.display = 'none';
     emailInput.classList.remove('valid', 'invalid');
   }
 });
 
-//Відправка форми
 sendButton.addEventListener('click', function (event) {
   event.preventDefault();
+
   const email = emailInput.value.trim();
   const comment = commentInput.value.trim();
 
   if (!email || !comment) {
-    iziToast.info({
+    return iziToast.info({
       title: 'Info',
       message: 'Please fill in all fields.',
       position: 'center',
       timeout: 5000,
     });
-    return;
   }
+
   fetch('https://portfolio-js.b.goit.study/api/requests', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, comment }),
   })
     .then(response => response.json())
@@ -56,14 +50,10 @@ sendButton.addEventListener('click', function (event) {
       if (data.title && data.message) {
         document.getElementById('modal-title').textContent = data.title;
         document.getElementById('modal-message').textContent = data.message;
-        modalFooterWindow.classList.add('show');
-        overlayFooter.classList.add('show');
 
-        //Скидання форми
+        openModal();
         form.reset();
-        emailInput.classList.remove('valid', 'invalid');
-        successMessage.style.display = 'none';
-        errorMessage.style.display = 'none';
+        resetValidation();
       } else {
         iziToast.error({
           title: 'Error',
@@ -73,8 +63,7 @@ sendButton.addEventListener('click', function (event) {
         });
       }
     })
-    .catch(error => {
-      //Обробка помилки під час запиту
+    .catch(() => {
       iziToast.error({
         title: 'Network Error',
         message:
@@ -84,23 +73,29 @@ sendButton.addEventListener('click', function (event) {
       });
     });
 });
-//Закриття модального вікна
-document.addEventListener('DOMContentLoaded', function () {
-  const closeButtonModal = document.querySelector('.close-modal');
 
-  function closeWindow() {
-    modalFooterWindow.classList.remove('show');
-    overlayFooter.classList.remove('show');
-  }
-  closeButtonModal.addEventListener('click', closeWindow);
-  modalFooterWindow.addEventListener('click', function (event) {
-    if (event.target === modalFooterWindow) {
-      closeWindow();
-    }
-  });
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      closeWindow();
-    }
-  });
+function openModal() {
+  modalFooterWindow.classList.add('show');
+  overlayFooter.classList.add('show');
+  document.body.classList.add('no-scroll');
+}
+
+function closeModal() {
+  modalFooterWindow.classList.remove('show');
+  overlayFooter.classList.remove('show');
+  document.body.classList.remove('no-scroll');
+}
+
+function resetValidation() {
+  emailInput.classList.remove('valid', 'invalid');
+  successMessage.style.display = 'none';
+  errorMessage.style.display = 'none';
+}
+
+closeButtonModal.addEventListener('click', closeModal);
+overlayFooter.addEventListener('click', event => {
+  if (event.target === overlayFooter) closeModal();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeModal();
 });

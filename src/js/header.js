@@ -35,7 +35,6 @@ const orderBtnMenu = document.querySelector('.btn-order-mobile-menu');
 
 function toggleMenu() {
   modalMobMenu.classList.toggle('is-open');
-  document.body.classList.toggle('no-scroll');
 }
 burgerBtnMenu.addEventListener('click', toggleMenu);
 closeButtonMobMenu.addEventListener('click', toggleMenu);
