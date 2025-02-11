@@ -1,0 +1,141 @@
+.benefits-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.benefits-container {
+  margin-bottom: 64px;
+}
+/* ul,
+ol {
+  list-style-type: none;
+  display: flex;
+} */
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.benefits-item-container {
+  border-radius: 20px;
+  padding: 24px;
+  width: auto;
+  max-width: 344px;
+  height: 270px;
+
+  background-color: #242527;
+}
+
+.benefits-icon-wrapper {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--common-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.benefits-icon {
+  stroke: #fafafa;
+  stroke-width: 2.5px;
+  fill: none;
+}
+
+.benefits-item-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+
+  margin-bottom: 8px;
+}
+
+.benefits-item-text {
+  font-family: 'Inter Tight', sans-serif;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  width: 296px;
+}
+
+.benefits-order-btn {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 187px;
+  height: 55px;
+  background: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.benefits-order-btn:hover {
+  border-color: #fafafa;
+}
+
+/* tablet version */
+@media screen and (min-width: 768px) {
+  .benefits-container {
+    margin-bottom: 96px;
+  }
+  .benefits-list {
+    display: flex;
+    gap: 16px;
+    max-width: 704px;
+  }
+}
+
+/* desktop version */
+
+@media screen and (min-width: 1440px) {
+  .benefits-container {
+    margin-bottom: 164px;
+  }
+  .benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .benefits-content {
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 680px;
+  }
+
+  .benefits-list {
+    flex-wrap: wrap;
+  }
+
+  .benefits-item {
+    width: calc((100% - 16px) / 2);
+  }
+}
