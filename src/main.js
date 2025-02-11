@@ -12,7 +12,6 @@ import './js/header';
 import './js/hero-section';
 import './js/about-me-section';
 import './js/animated-section';
-import './js/benefits-section';
 import './js/FAQ-section';
 import './js/projects-section';
 import './js/reviews-section';
