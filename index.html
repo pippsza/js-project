@@ -5,11 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devo project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="/js-project/assets/Favicon-OPOEfrG1.png" />
     <script type="module" crossorigin src="/js-project/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/js-project/assets/vendor-L1NlI7r7.js">
+    <link rel="modulepreload" crossorigin href="/js-project/assets/vendor-wGsJTA7v.js">
     <link rel="stylesheet" crossorigin href="/js-project/assets/vendor-BNhT-OS8.css">
-    <link rel="stylesheet" crossorigin href="/js-project/assets/index-D5OPIW6z.css">
+    <link rel="stylesheet" crossorigin href="/js-project/assets/index-CurlDsi7.css">
   </head>
   <body>
     <header class="page-header">
@@ -111,7 +112,133 @@
   </div>
 </section>
 
-      <section><h1>about-me-section</h1></section>
+      <section class="about-me-section-cont" id="about-me-section">
+  <div class="container">
+    <h2 class="visually-hidden">About Me</h2>
+
+    <div class="about-photo-and-text-container">
+      <div class="about-text">
+        <p class="about-description">
+          I work with people all over the world to create impressive and
+          <span class="about-highlight about-highlight-red">functional</span>
+          <span class="about-highlight">websites</span> that reflect each
+          client's unique personality.
+        </p>
+      </div>
+
+      <picture class="about-photo">
+        <source
+          srcset="/js-project/assets/about-me-desktop-Bfk7lW8D.jpg"
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/js-project/assets/about-me-tablet-DiNVy3CD.jpg"
+          media="(min-width: 768px)"
+        />
+        <img
+          src="/js-project/assets/about-me-mobile-CV7YeNHs.jpg"
+          alt="Lloyd Jefferson working on a laptop"
+        />
+      </picture>
+    </div>
+    <ul class="about-experience-list" id="accordion-container">
+      <li class="about-experience-list-element ac">
+        <div class="about-experience-list-header">
+          <h3 class="about-experience-list-titel ac-header">ABOUT ME</h3>
+          <div class="about-experience-list-logo-container ac-trigger">
+            <svg class="about-icon" width="36" height="36">
+              <use href="/js-project/assets/all-svg-D6u6p0Vk.svg#icon-down-arrow"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="ac-panel">
+          <p
+            class="about-experience-list-text about-experience-list-text-decoration"
+          >
+            I am Lloyd Jefferson, a talented programmer with extensive expertise
+            in software development. I have an understanding of different
+            programming languages ​​and technologies, always ready to improve my
+            skills. I always follow the latest trends and look for
+            unconventional, creative solutions to problems. I have a high level
+            of analytical skills and am able to effectively solve even the most
+            difficult tasks encountered on the way.
+          </p>
+          <p class="about-experience-list-text">
+            Able to work both independently and in a team. I can effectively
+            cooperate with colleagues, exchanging ideas and finding optimal
+            solutions. Professional maturity allows you to calmly cope with
+            challenges and stressful situations, while maintaining a high
+            quality of work. I am always looking for opportunities for
+            self-improvement. I actively study new technologies and practices to
+            stay abreast of the latest innovations. I have a strong
+            understanding of various programming languages, frameworks and
+            architectural concepts that allow me to create efficient and
+            scalable software.
+          </p>
+        </div>
+      </li>
+      <li class="about-experience-list-element ac">
+        <div class="about-experience-list-header">
+          <h3 class="about-experience-list-titel ac-header">ROLE</h3>
+          <div class="about-experience-list-logo-container ac-trigger">
+            <svg class="about-icon" width="36" height="36">
+              <use href="/js-project/assets/all-svg-D6u6p0Vk.svg#icon-down-arrow"></use>
+            </svg>
+          </div>
+        </div>
+
+        <ul class="ac-panel">
+          <li class="about-experience-list-text">Frontend development</li>
+          <li class="about-experience-list-text">HeadlessCMS,Wordpress</li>
+          <li class="about-experience-list-text">Blender(enjoy)</li>
+        </ul>
+      </li>
+      <li class="about-experience-list-element ac">
+        <div class="about-experience-list-header">
+          <h3 class="about-experience-list-titel ac-header">EDUCATION</h3>
+          <div class="about-experience-list-logo-container ac-trigger">
+            <svg class="about-icon" width="36" height="36">
+              <use href="/js-project/assets/all-svg-D6u6p0Vk.svg#icon-down-arrow"></use>
+            </svg>
+          </div>
+        </div>
+
+        <ul class="ac-panel">
+          <li class="about-experience-list-text">
+            2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+          </li>
+          <li class="about-experience-list-text">
+            2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+            New York
+          </li>
+          <li class="about-experience-list-text">
+            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="about-slider swiper">
+      <ul class="about-swiper-wrapper conn">
+        <li class="about-swiper-slide active">HTML/CSS</li>
+        <li class="about-swiper-slide">JavaScript</li>
+        <li class="about-swiper-slide">React</li>
+        <li class="about-swiper-slide">Node.js</li>
+        <li class="about-swiper-slide">React Native</li>
+        <li class="about-swiper-slide">Soft skills</li>
+        <li class="about-swiper-slide">Figma</li>
+      </ul>
+
+      <div class="swiper-slide-cover">
+        <button class="swiper-button-next" type="button">
+          <svg class="swiper-svg" width="28" height="28">
+            <use href="/js-project/assets/all-svg-D6u6p0Vk.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section class="benefits-container">
   <div class="benefits container">
@@ -873,7 +1000,84 @@
 
     </main>
 
-    <footer><h1>footer</h1></footer>
+    <footer class="footer">
+  <div class="footer-container container">
+    <div class="footer-content">
+      <div class="footer-title">
+        <img
+          class="footer-logo"
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAgICAgJCAkKCgkNDgwODRMREBARExwUFhQWFBwrGx8bGx8bKyYuJSMlLiZENS8vNUROQj5CTl9VVV93cXecnNEBCAgICAkICQoKCQ0ODA4NExEQEBETHBQWFBYUHCsbHxsbHxsrJi4lIyUuJkQ1Ly81RE5CPkJOX1VVX3dxd5yc0f/CABEIAFAAUAMBIgACEQEDEQH/xAAyAAABBAMBAAAAAAAAAAAAAAAGAQIFBwADBAgBAAMBAQAAAAAAAAAAAAAAAAECAwQA/9oADAMBAAIQAxAAAAAA9BrKAsZsAlcrh6oMIaDzppg8ecxQfo+MrEiRzW5Kys0bjeHmuGNhoEJyELO43xzdWDvbiN2QczHJToCpp2bYFlleW8R0tVNOHpFQKn6Jeldgy8Ow6rvSlLjuvxoZq3pRKmtkp5XjNG6suNuYG2Y13BuIvFLLrVoP/8QALxAAAgEEAAMGBQQDAAAAAAAAAQIDAAQFEQYSIRAxMkFRUgcTImFxFCBikhU0gf/aAAgBAQABPwDgjghuIzLdXMzRWETFCUI53k9BWLwmKw8Bhx1lHAp8RHVm6kjmY7Jo9l1kLS16SydfQVNxJZRSKpikIPmOWrW+tLxdwTK3qPMfkdmUw2Ly8Iiv7OOZR4SejL5nlYdRXGnBZ4eMVzbStLYysEBcjnR/Q1hMVDh8VZ46E7WCPlLe5j1ZtEnWz2GuMOJpMUEt7YAzOP61jbi9vLpZbgM8QlHP05tk0PnfMlcKFiI5VB6FfxWUkurOWOVJiHRujr9DAffVcK558rbyxz/7EJ0x9w7Mzi4cvi7ywmOlmj0G9rDqrdCN6P7OLsW8+RjlUdSBWHx0VsYw0QAYgufUjuq/tBpjFGNkHrWTtJmDc+yevQ1wHj7iGW7nbpGUC/uy00P6nXKzvGg2o/lvQG6OYS1VDc4m+Ub8YjEij+hNX/G+MSN3gSWQIQG2vJony+qslxKiallgKGVOZFYeIHzFYDM/psXFLcWFwsUsv0yRqJFHl111FHtPZlcYbllljcoQQX15hN67qV0deoGiO6s3joU+fNLbc8DOH0mt70F1116Vm4rKewaS45EuF5BDF10FX6gB0G9+dYGOWbFWatGFiD859TynYo0ew9mZvRYYq+ui4UxwOVJ92ulYfPY7M2qXFpKCdfXGfHG3oRWWY/piw5Sy+EHu3WYF2boLJcwluUFgoOgD9zVhbC0sbeD2IAfz2s6IjO7BVUbLE6AFTcc8KwytE2UQke1WYVf/ABWxMJK2djNP6M5CLXEPGeTzxWOXlitfKFPdUF1dWM4ntZ3ikHcyHRqw45llSOLInfKfEKxkh4lzJW35flqFMjkgEAHyFN06dvxI4gme5/xEDkRRAGfR8bU6kdfOmpW2Cu/uK2SOvfRqKWWF1kikZHU7DKSpH4IrH/EPiiyUIbpbhB5Trz1gvijBczpBlrZIOY6E0fgH5BoMrqrowZWAIIOwQaurqW9LXcjFmlJZm/ke+pXpjXca33Gm7qbpqgN0RXB3HZw9pdWd8TLCkTvbfZx3R/hqguGiBXvQ94qQoOqOGRh/0fmj2Ch4DRO2oeVMfqPZ/8QAHxEAAgICAgMBAAAAAAAAAAAAAQIAAxAREiEgIjFh/9oACAECAQE/AISAI1rb+iI/LN2uEKespVt9/MugdeJlmwP0SjZJwFg1LK0sHYiVBB1jfgZ//8QAHhEAAgICAwEBAAAAAAAAAAAAAQIAAxEhBBASMSD/2gAIAQMBAT8AEVSxxFpXGwZZV5+d8cE2aGdQPl5yGTzr73VY1ThllRHoEfJy/IVQOi0JJlVr1nUe5rDlusfgT//Z"
+          width="44"
+          height="44"
+          alt="Foto Lloyd"
+        />
+        <h2 class="logo-text">
+          Let's <span class="footer-accent-color">work</span> together
+        </h2>
+      </div>
+
+      <div class="footer-form-container">
+        <form class="footer-form">
+          <div class="footer-form-item">
+            <label for="user-email"
+              ><input
+                class="footer-form-input"
+                type="email"
+                id="user-email"
+                name="user-email"
+                placeholder="clients@gmail.com"
+                required
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              />
+            </label>
+            <p id="footer-error" class="error">Invalid email, try again</p>
+            <p id="footer-success" class="success">Succes!</p>
+          </div>
+          <div class="footer-form-item">
+            <label for="user-comments"
+              ><input
+                class="footer-form-input"
+                type="text"
+                id="user-comments"
+                name="user-comments"
+                placeholder="comments"
+                required
+            /></label>
+          </div>
+        </form>
+        <button class="footer-button" type="submit">Send</button>
+      </div>
+
+      <address class="footer-contacts">
+        <ul class="footer-contacts-list">
+          <li class="footer-contacts-item">
+            <a
+              class="footer-contacts-link"
+              href="mailto:lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com</a
+            >
+          </li>
+          <li class="footer-contacts-item">
+            <a class="footer-contacts-link" href="tel:+3801111111111"
+              >+380 11 1111 11 11</a
+            >
+          </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+  <div id="modal-footer" class="modal-footer container">
+    <svg class="close-modal" width="14" height="14">
+      <use href="/js-project/assets/all-svg-D6u6p0Vk.svg#icon-close"></use>
+    </svg>
+    <div class="modal-text">
+      <h2 id="modal-title"></h2>
+      <p id="modal-message"></p>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+</footer>
 
 
   </body>
