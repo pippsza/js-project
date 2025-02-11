@@ -30,7 +30,7 @@
 .reviews-wrapper {
   display: flex;
   align-items: stretch;
-  gap: 10px;
+  gap: 16px;
 }
 
 .swiper-slide {
@@ -98,6 +98,7 @@
 
 /* Стилі для контенту відгуків */
 .review-content {
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -110,26 +111,22 @@
   border-radius: 10px;
   width: 48px;
   height: 48px;
-  padding-top: 32px; /* Відступ зверху */
-  padding-left: 24px; /* Відступ зліва */
+  margin-bottom: 32px;
   background: #e0e0e0, url('path_to_image');
 }
 
 .review-author {
+  margin-bottom: 8px;
   font: 600 20px / 1.5 'Inter Tight', sans-serif;
   letter-spacing: -0.02em;
   color: #fafafa;
-  padding-top: 32px; /* Відступ зверху від аватарки */
-  padding-left: 24px; /* Відступ зліва */
-  padding-bottom: 8px; /* Відступ знизу до тексту відгуку */
 }
 
 .review-text {
   font: 500 16px / 1.5 'Inter Tight', sans-serif;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  padding-left: 24px; /* Відступ зліва */
-  padding-right: 24px;
+
   /*overflow: auto;*/
 }
 
@@ -144,18 +141,16 @@
   pointer-events: none;
 }
 
-@media (min-width: 320px) {
-  .swiper-slide {
-    flex: 0 0 100%; /* 1 картка на мобільних пристроях */
-    max-width: 365px;
-  }
+.swiper-slide {
+  flex: 0 0 100%; /* 1 картка на мобільних пристроях */
+  max-width: 327px;
 }
 
 @media (min-width: 768px) {
   .swiper-slide {
     /*width: 600px;*/
     flex: 0 0 50%; /* 2 картки на планшетах */
-    max-width: 373px;
+    max-width: 335px;
   }
 }
 
@@ -163,6 +158,6 @@
   .swiper-slide {
     /*width: 800px;*/
     flex: 0 0 25%; /* 4 картки на десктопах */
-    max-width: 350px;
+    max-width: 328px;
   }
 }

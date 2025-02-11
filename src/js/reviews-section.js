@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
           reviewItem.innerHTML = `
             <div class="review-content">
               <img src="${review.avatar_url}" alt="${review.author}'s avatar" class="review-avatar"/>
-              <p class="review-author">${review.author}</p>
+              <h3 class="review-author">${review.author}</h3>
               <p class="review-text">${review.review}</p>
             </div>
           `;
