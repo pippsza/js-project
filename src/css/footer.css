@@ -49,6 +49,7 @@
 .footer-form {
   display: flex;
   flex-direction: column;
+  width: 343px;
 }
 .footer-form-item {
   display: flex;
