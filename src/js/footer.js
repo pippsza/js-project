@@ -78,12 +78,14 @@ function openModal() {
   modalFooterWindow.classList.add('show');
   overlayFooter.classList.add('show');
   document.body.classList.add('no-scroll');
+  document.addEventListener('keydown', handleKeydown);
 }
 
 function closeModal() {
   modalFooterWindow.classList.remove('show');
   overlayFooter.classList.remove('show');
   document.body.classList.remove('no-scroll');
+  document.removeEventListener('keydown', handleKeydown);
 }
 
 function resetValidation() {
@@ -96,6 +98,6 @@ closeButtonModal.addEventListener('click', closeModal);
 overlayFooter.addEventListener('click', event => {
   if (event.target === overlayFooter) closeModal();
 });
-document.addEventListener('keydown', event => {
+function handleKeydown(event) {
   if (event.key === 'Escape') closeModal();
-});
+}
