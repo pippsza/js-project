@@ -4,7 +4,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 // import 'accordion-js/dist/accordion.min.css';
 import axios from 'axios';
 import Swiper from 'swiper';
-import 'swiper/css';
+// import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
