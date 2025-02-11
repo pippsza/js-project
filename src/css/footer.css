@@ -234,6 +234,14 @@
   stroke: #fafafa;
 }
 @media only screen and (min-width: 768px) {
+  #user-email {
+    margin-bottom: 0px;
+    padding: 0;
+  }
+  #user-comments {
+    margin-bottom: 0px;
+    padding: 0;
+  }
   .footer {
     padding-top: 80px;
     padding-bottom: 169px;
