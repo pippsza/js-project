@@ -1,5 +1,5 @@
 .about-me-section-cont {
-  margin-bottom: 64px;
+  padding: 64px 0;
 }
 .about-experience-list-element {
   border: none;
@@ -180,7 +180,8 @@
     margin-bottom: 64px;
   }
   .about-me-section-cont {
-    margin-bottom: 96px;
+    padding-top: 64px;
+    padding-bottom: 96px;
   }
 
   .about-text {
@@ -231,7 +232,8 @@
 
 @media only screen and (min-width: 1440px) {
   .about-me-section-cont {
-    margin-bottom: 164px;
+    padding-top: 96px;
+    padding-bottom: 164px;
   }
 
   .about-photo-and-text-container {
