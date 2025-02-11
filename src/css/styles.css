@@ -14,7 +14,9 @@
 @import url('./modal-menu.css');
 @import url('./hero-section.css');
 @import url('./animated-section.css');
-@import url('./about-me-section.css');
+@import url('./about/about-me-section.css');
+@import url('./about/slider.css');
+@import url('./about/accordion.css');
 @import url('./benefits-section.css');
 @import url('./FAQ-section.css');
 @import url('./projects-section.css');
