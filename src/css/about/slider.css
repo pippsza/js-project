@@ -1,30 +1,28 @@
-
-
-.about-slider{
+.about-slider {
   position: relative;
 }
 .swiper-slide-cover {
   position: absolute; /* Абсолютне позиціювання */
   top: 0; /* Верхній край */
   right: 0; /* Правий край */
-  height: 120px;/* Розміри, які перекривають півколо */
-  width: 83px;/* Розміри, які перекривають півколо */
-  background-color: #1C1D20;
+  height: 120px; /* Розміри, які перекривають півколо */
+  width: 83px; /* Розміри, які перекривають півколо */
+  background-color: #1c1d20;
   z-index: 2;
- }
+}
 
 .about-slider.swiper {
   --swiper-navigation-size: 28px;
   --swiper-navigation-sides-offset: 28px;
   padding-right: 83px;
-  
 
   /* width: 100%;
   padding: 20px 0;
   overflow: hidden; */
 
-  .swiper-slide {
+  .about-swiper-slide {
     /* flex: 1 1 auto; */
+    flex-shrink: 0;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -40,7 +38,7 @@
 
     &.active {
       background-color: #e74c3c;
-      
+
       font-weight: bold;
     }
   }
@@ -55,11 +53,11 @@
     align-items: center;
     justify-content: center;
     fill: none;
-    stroke: #3B3B3B;
+    stroke: #3b3b3b;
 
-    svg{
+    svg {
       fill: none;
-      stroke: #3B3B3B;
+      stroke: #3b3b3b;
     }
 
     &::after {
@@ -67,7 +65,7 @@
       content: '';
     }
     &:hover {
-      color: #3B3B3B;
+      color: #3b3b3b;
     }
     svg {
       display: block;
@@ -75,21 +73,19 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
-      
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
   .swiper-slide-cover {
-    height: 200px;/* Розміри, які перекривають півколо */
-    width: 112px;/* Розміри, які перекривають півколо */
+    height: 200px; /* Розміри, які перекривають півколо */
+    width: 112px; /* Розміри, які перекривають півколо */
   }
   .about-slider.swiper {
     --swiper-navigation-size: 28px;
     --swiper-navigation-sides-offset: 28px;
     padding-right: 83px;
-    
   }
 
   .about-slider.swiper {
@@ -105,8 +101,15 @@
     }
   }
 
-  .swiper-wrapper.conn {
-    .swiper-slide {
+  .about-swiper-wrapper.conn {
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(
+      --swiper-wrapper-transition-timing-function,
+      initial
+    );
+    box-sizing: content-box;
+    .about-swiper-slide {
       width: 200px;
       height: 200px;
     }
@@ -114,9 +117,9 @@
 }
 @media only screen and (min-width: 1440px) {
   .swiper-slide-cover {
-    height: 200px;/* Розміри, які перекривають півколо */
-    width: 112px;/* Розміри, які перекривають півколо */
-   }
+    height: 200px; /* Розміри, які перекривають півколо */
+    width: 112px; /* Розміри, які перекривають півколо */
+  }
   .about-swiper-container.swiper {
     max-width: 1312px;
     padding-right: 112px;

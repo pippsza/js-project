@@ -1,8 +1,6 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
 
-
-
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('#accordion-container', {
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       delay: 2000,
       disableOnInteraction: false,
     },
-    
+
     observeParents: true,
     keyboard: {
       enabled: true,
@@ -78,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // прокручування
   swiper.on('slideChange', () => {
-    document.querySelectorAll('.swiper-slide').forEach(slide => {
+    document.querySelectorAll('.about-swiper-slide').forEach(slide => {
       slide.classList.remove('active');
     });
 
