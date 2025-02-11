@@ -246,12 +246,14 @@
     max-width: 680px;
     max-height: 700px;
     padding-bottom: 436px;
+    margin: 0;
   }
   .about-description {
     letter-spacing: -0.06em;
   }
   .about-photo {
     max-width: 680px;
+    margin: 0;
   }
 
   .about-info {

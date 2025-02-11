@@ -4,7 +4,7 @@ import Swiper from 'swiper';
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('#accordion-container', {
-    duration: 2000,
+    duration: 200,
     showMultiple: false,
     openOnInit: [0],
   });
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: 0,
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 200,
       disableOnInteraction: false,
     },
 
