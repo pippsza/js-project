@@ -4,8 +4,8 @@ const emailInput = document.getElementById('user-email');
 const commentInput = document.getElementById('user-comments');
 const errorMessage = document.getElementById('footer-error');
 const successMessage = document.getElementById('footer-success');
-const overlay = document.querySelector('.overlay');
-const modalWindow = document.getElementById('modal-footer');
+const overlayFooter = document.querySelector('.overlay');
+const modalFooterWindow = document.getElementById('modal-footer');
 const sendButton = document.querySelector('.footer-button');
 const form = document.querySelector('.footer-form');
 
@@ -56,8 +56,8 @@ sendButton.addEventListener('click', function (event) {
       if (data.title && data.message) {
         document.getElementById('modal-title').textContent = data.title;
         document.getElementById('modal-message').textContent = data.message;
-        modalWindow.classList.add('show');
-        overlay.classList.add('show');
+        modalFooterWindow.classList.add('show');
+        overlayFooter.classList.add('show');
 
         //Скидання форми
         form.reset();
@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeButtonModal = document.querySelector('.close-modal');
 
   function closeWindow() {
-    modalWindow.classList.remove('show');
-    overlay.classList.remove('show');
+    modalFooterWindow.classList.remove('show');
+    overlayFooter.classList.remove('show');
   }
   closeButtonModal.addEventListener('click', closeWindow);
-  modalWindow.addEventListener('click', function (event) {
-    if (event.target === modalWindow) {
+  modalFooterWindow.addEventListener('click', function (event) {
+    if (event.target === modalFooterWindow) {
       closeWindow();
     }
   });
