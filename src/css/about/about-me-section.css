@@ -149,7 +149,9 @@
   list-style: none;
   padding: 0;
 }
-
+.about-photo-and-text-container {
+  margin-bottom: 32px;
+}
 .about-skills-item {
   padding: 12px 24px;
   border-radius: 50px;
@@ -174,6 +176,9 @@
 
 /* Адаптивні стилі */
 @media only screen and (min-width: 768px) {
+  .about-photo-and-text-container {
+    margin-bottom: 64px;
+  }
   .about-me-section-cont {
     margin-bottom: 96px;
   }
@@ -230,6 +235,7 @@
   }
 
   .about-photo-and-text-container {
+    margin-bottom: 96px;
     display: flex;
     gap: 16px;
   }
