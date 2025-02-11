@@ -1,3 +1,6 @@
+.about-me-section-cont{
+  margin-bottom: 64px;
+}
 .about-experience-list-element {
   border: none;
   padding: 0;
@@ -173,6 +176,10 @@ justify-content: flex-start;
 
 /* Адаптивні стилі */
 @media only screen and (min-width: 768px) {
+  .about-me-section-cont{
+    margin-bottom: 96px;
+  }
+  
   .about-text {
     flex-direction: row;
     justify-content: space-between;
@@ -225,6 +232,11 @@ letter-spacing: -0.04em;
 }
 
 @media only screen and (min-width: 1440px) {
+
+  .about-me-section-cont{
+    margin-bottom: 164px;
+  }
+  
 
   .about-photo-and-text-container{
     display: flex;
