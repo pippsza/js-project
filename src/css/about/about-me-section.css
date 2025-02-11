@@ -76,7 +76,7 @@
   transition: transform 550ms ease-in-out;
 }
 
-.ac.is-active .about-icon {
+.about-experience-list-element.is-active .about-icon {
   transform: rotate(180deg);
 }
 .about-experience-list {
@@ -90,7 +90,7 @@
     
   }
 
-  .ac .ac-trigger{
+  .about-experience-list-element .about-experience-list-logo-container{
 display: flex;
 align-items: center;
 justify-content: flex-start;
@@ -113,12 +113,12 @@ justify-content: flex-start;
   align-items: center;
 }
 
-.about-experience-list .ac .ac-trigger {
+.about-experience-list .about-experience-list-element .about-experience-list-logo-container {
   width: 36px;
   height: 36px;
   
 }
-.about-experience-list .ac .ac-trigger::after {
+.about-experience-list .about-experience-list-element .about-experience-list-logo-container::after {
   display: none;
 }
 

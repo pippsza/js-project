@@ -1,14 +1,12 @@
 import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
+
 
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('#accordion-container', {
-    duration: 300,
+    duration: 2000,
     showMultiple: false,
     openOnInit: [0],
   });
@@ -26,6 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next',
     },
     slidesPerView: 2,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 6,
+      },
+    },
     spaceBetween: 0,
     loop: true,
     autoplay: {
