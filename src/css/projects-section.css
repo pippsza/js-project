@@ -92,7 +92,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 353px;
+  height: 395px;
   background-color: #fafafa;
   border-radius: 24px 24px 0 0;
   align-content: space-between;
@@ -208,7 +208,7 @@
   .project-info {
     padding: 64px;
     padding-right: 146px;
-    height: 440px;
+    height: 566px;
   }
 
   .project-image {
@@ -271,7 +271,7 @@
   }
   .project-info {
     width: 687px;
-    height: 497px;
+    height: 630px;
     padding-right: 130px;
 
     border-radius: 24px 0 0 24px;
