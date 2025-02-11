@@ -8,10 +8,10 @@
   content: '';
   position: absolute;
   top: 0;
-  background-image: url(../img/img/footer-bg-mob.png);
+  background-image: url(/img/img/footer-bg-mob.png);
   height: 100%;
   width: 100%;
-  background-position: right;
+  background-position: top right;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -237,7 +237,7 @@
 }
 @media only screen and (min-width: 768px) {
   .footer-container::after {
-    background-image: url(../img/img/footer-bg-tabl.png);
+    background-image: url(/img/img/footer-bg-tabl.png);
     right: 0;
   }
   .footer-content {
@@ -326,7 +326,7 @@
     justify-content: center;
   }
   .footer-container::after {
-    background-image: url(../img/img/footer-bg-desc.png);
+    background-image: url(/img/img/footer-bg-desc.png);
   }
   .footer-content {
     width: 1048px;
