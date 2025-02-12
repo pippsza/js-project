@@ -5,10 +5,12 @@ import { Keyboard, Navigation, Mousewheel } from 'swiper/modules';
 
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
-  new Accordion('#accordion-container', {
-    duration: 200,
-    showMultiple: false,
+  new Accordion('.about-experience-list', {
+    duration: 900,
+    showMultiple: true,
+    elementClass: `about-experience-list-element`,
     openOnInit: [0],
+    
   });
 
   const swiperContainer = document.querySelector('.about-slider');
