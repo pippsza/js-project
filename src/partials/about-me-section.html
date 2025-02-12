@@ -3,13 +3,29 @@
     <h2 class="visually-hidden">About Me</h2>
 
     <div class="about-photo-and-text-container">
-    <div class="about-text">
-      <p class="about-description">
-        I work with people all over the world to create impressive and
-        <span class="about-highlight about-highlight-red">functional</span>
-        <span class="about-highlight">websites</span> that reflect each client's
-        unique personality.
-      </p>
+      <div class="about-text">
+        <p class="about-description">
+          I work with people all over the world to create impressive and
+          <span class="about-highlight about-highlight-red">functional</span>
+          <span class="about-highlight">websites</span> that reflect each
+          client's unique personality.
+        </p>
+      </div>
+
+      <picture class="about-photo">
+        <source
+          srcset="/img/img/about-me-desktop.jpg"
+          media="(min-width: 1440px)" type="image/webp"
+        />
+        <source
+          srcset="/img/img/about-me-tablet.jpg"
+          media="(min-width: 768px)" type="image/webp"
+        />
+        <img
+          src="/img/img/about-me-mobile.jpg"
+          alt="Lloyd Jefferson working on a laptop" 
+        />
+      </picture>
     </div>
 
     <picture class="about-photo">
@@ -106,18 +122,15 @@
 
     
     <div class="about-slider swiper">
-        
-            <ul class="swiper-wrapper conn">
-                <li class="swiper-slide active">HTML/CSS</li>
-                <li class="swiper-slide ">JavaScript</li>
-                <li class="swiper-slide ">React</li>
-                <li class="swiper-slide ">Node.js</li>
-                <li class="swiper-slide ">React Native</li>
-                <li class="swiper-slide ">Soft skills</li>
-                <li class="swiper-slide ">Figma</li>
-            </ul>
-    
-            
+      <ul class="swiper-wrapper conn">
+        <li class="swiper-slide active">HTML/CSS</li>
+        <li class="swiper-slide swiper-slide-cover">JavaScript</li>
+        <li class="swiper-slide swiper-slide-cover">React</li>
+        <li class="swiper-slide swiper-slide-cover">Node.js</li>
+        <li class="swiper-slide swiper-slide-cover">React Native</li>
+        <li class="swiper-slide swiper-slide-cover">Soft skills</li>
+        <li class="swiper-slide swiper-slide-cover">Figma</li>
+      </ul>
 
             <div class="swiper-slide-cover">
                 <button class="swiper-button-next" type="button">

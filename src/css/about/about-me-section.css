@@ -46,7 +46,7 @@
 
 .about-photo {
   width: 100%;
-  max-width: 343px;
+  min-width: 343px;
   height: 500px;
   display: flex;
   margin-bottom: 32px;
@@ -194,7 +194,7 @@ letter-spacing: -0.04em;
 
 }
   .about-photo {
-    max-width: 704px;
+    min-width: 704px;
     height: 700px;
   }
   .about-experience-list {
@@ -247,9 +247,12 @@ letter-spacing: -0.04em;
   .about-text {
     max-width: 680px;
     max-height: 700px;
-    padding-bottom: 436px;
-    
-    
+    padding: 64px 64px 436px 64px;
+    margin: 0;
+   
+  }
+  .about-description {
+    letter-spacing: -0.06em;
   }
 .about-description{
   letter-spacing: -0.06em;

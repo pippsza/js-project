@@ -21,8 +21,9 @@
 
  
 
-  .swiper-slide {
-   
+  .swiper-wrapper .swiper-slide {
+    /* flex: 1 1 auto; */
+    flex-shrink: 0;
     width: 120px;
     height: 120px;
     border-radius: 50%;

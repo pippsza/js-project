@@ -48,14 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mousewheel: {
       invert: false,
     },
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-      },
-      1440: {
-        slidesPerView: 6,
-      },
-    },
+    
   });
 
   // клавіатура
