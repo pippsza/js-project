@@ -1,6 +1,7 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
 import 'swiper/css';
+import { Keyboard, Navigation, Mousewheel } from 'swiper/modules';
 
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
@@ -19,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const swiper = new Swiper(swiperContainer, {
+    spaceBetween: 0,
+    slidesPerView: 2,
+    loop: true,
+    modules: [Navigation, Keyboard, Mousewheel],
     navigation: {
       nextEl: '.swiper-button-next',
     },

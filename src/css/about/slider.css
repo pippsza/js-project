@@ -20,7 +20,7 @@
   padding: 20px 0;
   overflow: hidden; */
 
-  .about-swiper-slide {
+  .about-slider .swiper-slide {
     /* flex: 1 1 auto; */
     flex-shrink: 0;
     width: 120px;
@@ -101,7 +101,7 @@
     }
   }
 
-  .about-swiper-wrapper.conn {
+  .about-slider .swiper-slide .conn {
     display: flex;
     transition-property: transform;
     transition-timing-function: var(

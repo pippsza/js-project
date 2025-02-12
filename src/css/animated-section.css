@@ -1,4 +1,5 @@
 .covers {
+  overflow: hidden;
   position: relative;
   padding-bottom: 64px;
   overflow: hidden;
@@ -18,6 +19,7 @@
 }
 
 .covers-content {
+  overflow: hidden;
   position: relative;
   display: block;
   height: 508px;
