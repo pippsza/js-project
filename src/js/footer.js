@@ -23,8 +23,8 @@ emailInput.addEventListener('input', function () {
     errorMessage.classList.add('show');
   }
   if (emailInput.value === '') {
-    successMessage.style.display = 'none';
-    errorMessage.style.display = 'none';
+    successMessage.classList.remove('show');
+    errorMessage.classList.remove('show');
     emailInput.classList.remove('valid', 'invalid');
   }
 });
@@ -56,14 +56,13 @@ sendButton.addEventListener('click', function (event) {
       if (data.title && data.message) {
         document.getElementById('modal-title').textContent = data.title;
         document.getElementById('modal-message').textContent = data.message;
-        modalFooterWindow.classList.add('show');
-        overlayFooter.classList.add('show');
+        openWindow();
 
         //Скидання форми
         form.reset();
         emailInput.classList.remove('valid', 'invalid');
-        successMessage.style.display = 'none';
-        errorMessage.style.display = 'none';
+        successMessage.classList.remove('show');
+        errorMessage.classList.remove('show');
       } else {
         iziToast.error({
           title: 'Error',
@@ -84,22 +83,33 @@ sendButton.addEventListener('click', function (event) {
       });
     });
 });
+
+//Відкриття модального вікна
+function openWindow() {
+  modalFooterWindow.classList.add('show');
+  overlayFooter.classList.add('show');
+  document.body.classList.add('overflow-hidden');
+  document.addEventListener('keydown', closeFooterWindowOnEscape);
+}
+
 //Закриття модального вікна
+function closeWindow() {
+  modalFooterWindow.classList.remove('show');
+  overlayFooter.classList.remove('show');
+  document.body.classList.remove('overflow-hidden');
+  document.removeEventListener('keydown', closeFooterWindowOnEscape);
+}
+
+function closeFooterWindowOnEscape(event) {
+  if (event.key === 'Escape') {
+    closeWindow();
+  }
+}
 document.addEventListener('DOMContentLoaded', function () {
   const closeButtonModal = document.querySelector('.close-modal');
-
-  function closeWindow() {
-    modalFooterWindow.classList.remove('show');
-    overlayFooter.classList.remove('show');
-  }
   closeButtonModal.addEventListener('click', closeWindow);
-  modalFooterWindow.addEventListener('click', function (event) {
-    if (event.target === modalFooterWindow) {
-      closeWindow();
-    }
-  });
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
+  overlayFooter.addEventListener('click', function (event) {
+    if (event.target === overlayFooter) {
       closeWindow();
     }
   });

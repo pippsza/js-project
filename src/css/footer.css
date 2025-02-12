@@ -1,6 +1,6 @@
-/*.footer {
-  position: relative;
-}*/
+.footer {
+  padding: 32px 0;
+}
 .footer-container {
   position: relative;
 }
@@ -14,9 +14,6 @@
   background-position: top right;
   background-repeat: no-repeat;
   z-index: -1;
-}
-.footer-content {
-  padding: 32px 0;
 }
 .footer-title {
   max-width: 300px;
@@ -51,7 +48,6 @@
 .footer-form {
   display: flex;
   flex-direction: column;
-  width: 343px;
 }
 .footer-form-item {
   display: flex;
@@ -175,13 +171,14 @@
   border: 1px solid #fafafa;
 }
 .modal-footer {
+  box-sizing: border-box;
   display: none;
   position: absolute;
   z-index: 99;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 343px;
+  min-width: 310px;
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
   background-color: #1c1d20;
@@ -203,6 +200,9 @@
 .overlay.show {
   display: block;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .modal-text {
   min-width: 279px;
 }
@@ -213,7 +213,7 @@
   letter-spacing: -0.02em;
   text-align: center;
   color: #fafafa;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .modal-text p {
   font-weight: 500;
@@ -235,14 +235,14 @@
   cursor: pointer;
   stroke: #fafafa;
 }
+
 @media only screen and (min-width: 768px) {
+  .footer {
+    padding: 80px 0px 169px 0px;
+  }
   .footer-container::after {
     background-image: url(/img/img/footer-bg-tabl.png);
     right: 0;
-  }
-  .footer-content {
-    box-sizing: border-box;
-    padding: 80px 0px 169px 0px;
   }
   .footer-title {
     max-width: 542px;
@@ -265,8 +265,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 18px;
-    width: 768px;
   }
   .footer-form-item {
     display: flex;
@@ -306,11 +304,14 @@
   }
   .modal-footer {
     display: none;
-    padding: 64px 52px;
-    min-width: 502px;
+    padding: 64px 64px;
+    max-width: 494px;
   }
   .modal-text {
-    margin: 0;
+    min-width: 364px;
+  }
+  .modal-text h2 {
+    letter-spacing: -0.06em;
   }
   .modal-text p {
     letter-spacing: 0.02em;
@@ -330,9 +331,6 @@
   }
   .footer-content {
     width: 1048px;
-  }
-  .footer-form {
-    width: 820px;
   }
   .footer-form-input {
     min-width: 390px;
