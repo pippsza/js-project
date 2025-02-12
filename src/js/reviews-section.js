@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         reviews.forEach(review => {
           const reviewItem = document.createElement('li');
           reviewItem.classList.add('swiper-slide');
+          reviewItem.classList.add('reviews-slide');
           reviewItem.innerHTML = `
             <div class="review-content">
               <img src="${review.avatar_url}" alt="${review.author}'s avatar" class="review-avatar"/>
