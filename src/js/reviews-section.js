@@ -16,17 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
       enabled: true,
       onlyInViewport: false,
     },
-    speed: 1000, // Тривалість анімації у мілісекундах (1 секунда)
+    speed: 1000,
     breakpoints: {
-      320: {
-        slidesPerView: 1, // Мобільні пристрої (320px і більше)
-      },
-      768: {
-        slidesPerView: 2, // Планшети (768px і більше)
-      },
-      1440: {
-        slidesPerView: 4, // Десктоп (1440px і більше)
-      },
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1440: { slidesPerView: 4 },
     },
   });
 
@@ -43,11 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let maxHeight = 0;
 
     reviewItems.forEach(item => {
-      item.style.height = 'auto'; // Скинути висоту для перевірки фактичної висоти
-      const itemHeight = item.offsetHeight;
-      if (itemHeight > maxHeight) {
-        maxHeight = itemHeight;
-      }
+      item.style.height = 'auto';
+      maxHeight = Math.max(maxHeight, item.offsetHeight);
     });
 
     reviewItems.forEach(item => {
@@ -55,42 +46,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  swiper.on('init', function () {
+  swiper.on('init', () => {
     updateButtonState();
     setEqualHeight();
   });
 
-  swiper.on('reachEnd', function () {
-    updateButtonState();
+  swiper.on('reachEnd', updateButtonState);
+  swiper.on('reachBeginning', updateButtonState);
+  swiper.on('slideChange', updateButtonState);
+  swiper.on('resize', setEqualHeight);
+
+  document.getElementById('custom-prev').addEventListener('click', () => {
+    if (!swiper.isBeginning) swiper.slidePrev();
   });
 
-  swiper.on('reachBeginning', function () {
-    updateButtonState();
+  document.getElementById('custom-next').addEventListener('click', () => {
+    if (!swiper.isEnd) swiper.slideNext();
   });
 
-  swiper.on('slideChange', function () {
-    updateButtonState();
-  });
-
-  swiper.on('resize', function () {
-    setEqualHeight(); // Перевстановити висоту при зміні розміру вікна
-  });
-
-  document.getElementById('custom-prev').addEventListener('click', function () {
-    if (!swiper.isBeginning) {
+  document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
       swiper.slidePrev();
     }
-  });
-
-  document.getElementById('custom-next').addEventListener('click', function () {
-    if (!swiper.isEnd) {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
       swiper.slideNext();
     }
   });
 
-  axios
-    .get('https://portfolio-js.b.goit.study/api/reviews')
-    .then(response => {
+  async function loadReviews() {
+    try {
+      const response = await axios.get(
+        'https://portfolio-js.b.goit.study/api/reviews'
+      );
       const reviewsList = document.querySelector('.swiper-wrapper');
       const reviews = response.data;
 
@@ -112,15 +101,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       swiper.update();
-      setEqualHeight(); // Встановити рівну висоту після завантаження відгуків
+      setEqualHeight();
       updateButtonState();
-    })
-    .catch(error => {
+    } catch (error) {
       iziToast.error({
         title: 'Error',
         message: 'An error occurred: ' + error.message,
       });
       const reviewsList = document.querySelector('.swiper-wrapper');
       reviewsList.innerHTML = '<li class="swiper-slide">Not found</li>';
-    });
+    }
+  }
+
+  loadReviews();
 });
