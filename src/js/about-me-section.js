@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
+import 'swiper/css';
 
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
