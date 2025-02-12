@@ -2,16 +2,13 @@
 /* ----------- Мобільна версія (за замовчуванням) ----------- */
 
 .hero-section {
-  box-sizing: content-box;
-  text-align: left;
+  /* box-sizing: content-box; */
+
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
   flex-direction: column;
-  gap: 212px;
-  padding-top: 281px;
-  padding-bottom: 32px;
 }
 .hero-button {
   border: none;
@@ -45,6 +42,7 @@
 }
 
 .hero-h {
+  margin-bottom: 180px;
   font-weight: 500;
   font-size: 50px;
   line-height: 100%;
@@ -56,11 +54,11 @@
   background-image: url(../img/img/Hero-mobile.png);
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
-  height: 812px;
-  width: 100%;
   position: relative;
-  margin-bottom: 64px;
+
+  padding-top: 281px;
+  padding-bottom: 32px;
+  padding-bottom: 32px;
 }
 .hero-image::before {
   content: '';
@@ -75,13 +73,13 @@
     var(--common-color) 100%
   );
   transform: rotate(-180deg);
-  width: 100vw;
+  /* width: 100vw; */
   height: 812px;
   z-index: -1;
 }
 .hero-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 4px;
 }
@@ -115,20 +113,17 @@
 @media screen and (min-width: 768px) {
   .hero-image {
     background-image: url(../img/img/Hero-tablet.png);
-    max-width: 100%;
-    height: 1024px;
+    /* max-width: 100%; */
+
+    padding-top: 300px;
   }
   .hero-image::before {
     height: 1024px;
   }
   .hero-list {
-    margin-left: auto;
     gap: 8px;
   }
-  .hero-section {
-    gap: 187px;
-    padding-top: 300px;
-  }
+
   .hero-section::before {
     height: 1024px;
   }
@@ -141,6 +136,7 @@
     width: 223px;
   }
   .hero-h {
+    margin-bottom: 187px;
     font-size: 90px;
   }
   @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
@@ -175,18 +171,18 @@
   .hero-link:first-child:hover {
     border-color: white;
   }
-  .hero-section {
-    gap: 243px;
+  .hero-h {
+    margin-bottom: 243px;
   }
   .hero-section::before {
     height: 900px;
   }
   .hero-image {
-    margin-bottom: 96px;
+    /* margin-bottom: 96px; */
     transition: background 1s ease-in-out, color 1s ease-in-out;
     background-image: var(--common-image);
     max-width: 100%;
-    height: 900px;
+
     background-size: cover;
   }
   .hero-image::before {

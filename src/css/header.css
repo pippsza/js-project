@@ -3,7 +3,7 @@
   position: absolute;
   width: 100%;
   padding: 32px 0;
-  z-index: 999;
+  z-index: 666;
 }
 .page-header.scrolled {
   position: fixed;
@@ -44,6 +44,7 @@
 }
 .burger-btn {
   border: none;
+  z-index: 999999;
   background-color: transparent;
   padding: 0;
   stroke: #fafafa;
@@ -65,7 +66,10 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #fafafa;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     cursor: pointer;
   }
 
@@ -75,10 +79,9 @@
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     text-align: center;
     align-items: center;
-    padding-top: 8px;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }

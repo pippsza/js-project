@@ -8,7 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .red-theme {
   --common-image: url(../img/img/Hero-desktop.png);
   --retina-image: url(../img/img/Hero-desktop@2x.png);
@@ -65,14 +64,10 @@ button {
 }
 
 body {
-  margin: 0 auto;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
 
   background-color: #1c1d20;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-
-  min-width: 100vw;
-  min-height: 100vh;
 }

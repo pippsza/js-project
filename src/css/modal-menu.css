@@ -1,43 +1,32 @@
 .mobile-menu {
+  top: 0;
+  left: 0;
   position: fixed;
   display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   opacity: 0;
+  z-index: 6662;
   visibility: hidden;
-
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu.is-open {
   opacity: 1;
-  z-index: 999;
   visibility: visible;
   pointer-events: auto;
 }
+
 .mobile-menu-image {
+  position: fixed;
+
   background-image: url(../img/img/modal-mobile.png);
   background-size: cover;
-}
-.mobile-menu-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  /* right: 0;
-  left: 0; */
-  background: linear-gradient(
-    90deg,
-    #1c1d20 49.68%,
-    var(--middle-gradient) 67.73%,
-    var(--common-color) 100%
-  );
-  transform: rotate(-180deg);
-  width: 100vw;
-  height: 812px;
-  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 6663;
 }
 /* Поддержка Retina для мобильных устройств */
 @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
@@ -51,10 +40,12 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
-  padding-top: 302px;
-  padding-bottom: 64px;
-  justify-content: space-between;
+  gap: 289px;
+  /* padding-top: 302px; */
+  padding: 64px 0;
+  justify-content: flex-end;
   align-items: center;
+  z-index: 6665;
 }
 
 .close-btn-mob-menu {
@@ -85,6 +76,10 @@
 .mobile-item-link:focus {
   color: #ed3b44;
 }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 .btn-order-mobile-menu {
   display: flex;
   font-size: 14px;
@@ -100,7 +95,7 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
-  margin-top: 40px;
+
   flex-shrink: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

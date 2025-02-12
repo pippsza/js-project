@@ -1,0 +1,171 @@
+#reviews {
+  padding-bottom: 64px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.reviews-title {
+  font: 600 16px / 1.5 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+/* Стилі для контейнера слайдера */
+.reviews-container {
+  width: 100%;
+  overflow: hidden;
+  background: #1c1d20;
+}
+
+.reviews-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.reviews-slide {
+  list-style: none;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  height: auto;
+  max-height: 325px; /* Встановіть максимальну висоту для карток */
+}
+
+/* Приховані стандартні кнопки Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Нові кнопки під слайдером */
+.custom-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.button-custom-prev,
+.button-custom-next {
+  cursor: pointer;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1d20;
+  fill: none;
+  stroke: #fafafa;
+}
+
+.button-custom-prev:disabled,
+.button-custom-next:disabled {
+  cursor: not-allowed;
+  stroke: #3b3b3b;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Стилі для контенту відгуків */
+.review-content {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%; /* Розтягує вміст по висоті слайда */
+  box-sizing: border-box; /* Враховує padding у розмірах елементів */
+}
+
+.review-avatar {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+  background: #e0e0e0, url('path_to_image');
+}
+
+.review-author {
+  margin-bottom: 8px;
+  font: 600 20px / 1.5 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.review-text {
+  font: 500 16px / 1.5 'Inter Tight', sans-serif;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+
+  /*overflow: auto;*/
+}
+
+/* Стилі для кнопок керування слайдером */
+.swiper-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.icon use {
+  pointer-events: none;
+}
+
+.reviews-slide {
+  flex: 0 0 100%; /* 1 картка на мобільних пристроях */
+  max-width: 327px;
+}
+
+@media (min-width: 768px) {
+  #reviews {
+    padding-bottom: 96px;
+  }
+
+  .reviews-slide {
+    /*width: 600px;*/
+    flex: 0 0 50%; /* 2 картки на планшетах */
+    max-width: 335px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #reviews {
+    padding-bottom: 164px;
+  }
+
+  .reviews-slide {
+    /*width: 800px;*/
+    flex: 0 0 25%; /* 4 картки на десктопах */
+    max-width: 328px;
+  }
+}

@@ -1,8 +1,8 @@
 .covers {
-  position: relative;
-  margin-bottom: 64px;
   overflow: hidden;
-  width: 100vw;
+  position: relative;
+  padding-bottom: 64px;
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -19,6 +19,7 @@
 }
 
 .covers-content {
+  overflow: hidden;
   position: relative;
   display: block;
   height: 508px;
@@ -84,7 +85,7 @@
 
 @media only screen and (min-width: 768px) {
   .covers {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
 
   .covers-content {
@@ -119,7 +120,7 @@
 
 @media only screen and (min-width: 1440px) {
   .covers {
-    margin-bottom: 162px;
+    padding-bottom: 162px;
   }
 
   .covers-content {

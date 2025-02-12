@@ -1,1 +1,34 @@
-<section><h1>reviews-section</h1></section>
+<section id="reviews">
+  <div class="container">
+    <h2 class="reviews-title">REVIEWS</h2>
+    <div class="swiper-container reviews-container">
+      <ul class="swiper-wrapper reviews-wrapper">
+        <!-- Відгуки будуть динамічно додані тут -->
+      </ul>
+      <!-- Приховані стандартні кнопки Swiper -->
+      <div class="swiper-button-prev" aria-label="Previous review"></div>
+      <div class="swiper-button-next" aria-label="Next review"></div>
+    </div>
+    <!-- Нові кнопки під слайдером -->
+    <div class="custom-buttons">
+      <button
+        id="custom-prev"
+        class="button-custom-prev"
+        aria-label="Previous review"
+      >
+        <svg class="icon" width="24" height="24">
+          <use xlink:href="/img/svg/all-svg.svg#icon-left-arrow"></use>
+        </svg>
+      </button>
+      <button
+        id="custom-next"
+        class="button-custom-next"
+        aria-label="Next review"
+      >
+        <svg class="icon" width="24" height="24">
+          <use xlink:href="/img/svg/all-svg.svg#icon-right-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>

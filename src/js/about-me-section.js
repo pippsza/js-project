@@ -1,12 +1,12 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
-
-
+import 'swiper/css';
+import { Keyboard, Navigation, Mousewheel } from 'swiper/modules';
 
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('#accordion-container', {
-    duration: 2000,
+    duration: 200,
     showMultiple: false,
     openOnInit: [0],
   });
@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const swiper = new Swiper(swiperContainer, {
+    spaceBetween: 0,
+    slidesPerView: 2,
+    loop: true,
+    modules: [Navigation, Keyboard, Mousewheel],
     navigation: {
       nextEl: '.swiper-button-next',
     },
@@ -35,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: 0,
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 200,
       disableOnInteraction: false,
     },
-    
+
     observeParents: true,
     keyboard: {
       enabled: true,
@@ -71,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // прокручування
   swiper.on('slideChange', () => {
-    document.querySelectorAll('.swiper-slide').forEach(slide => {
+    document.querySelectorAll('.about-swiper-slide').forEach(slide => {
       slide.classList.remove('active');
     });
 

@@ -1,5 +1,5 @@
-.about-me-section-cont{
-  margin-bottom: 64px;
+.about-me-section-cont {
+  padding: 64px 0;
 }
 .about-experience-list-element {
   border: none;
@@ -41,7 +41,7 @@
 }
 
 .about-highlight-red {
-  color: #ed3b44;
+  color: var(--common-color);
 }
 
 .about-photo {
@@ -83,25 +83,24 @@
   transform: rotate(180deg);
 }
 .about-experience-list {
-
+  margin-bottom: 32px;
   .about-experience-list-element {
-    background-color: #1C1D20;
+    background-color: #1c1d20;
     border: none;
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     padding-bottom: 32px;
     margin-bottom: 20px;
-    
+  }
+  .about-experience-list-element:last-child {
+    margin-bottom: 0;
   }
 
-  .about-experience-list-element .about-experience-list-logo-container{
-display: flex;
-align-items: center;
-justify-content: flex-start;
+  .about-experience-list-element .about-experience-list-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
-
 }
-
-
 
 .about-experience-list-titel {
   font-weight: 600;
@@ -116,12 +115,15 @@ justify-content: flex-start;
   align-items: center;
 }
 
-.about-experience-list .about-experience-list-element .about-experience-list-logo-container {
+.about-experience-list
+  .about-experience-list-element
+  .about-experience-list-logo-container {
   width: 36px;
   height: 36px;
-  
 }
-.about-experience-list .about-experience-list-element .about-experience-list-logo-container::after {
+.about-experience-list
+  .about-experience-list-element
+  .about-experience-list-logo-container::after {
   display: none;
 }
 
@@ -151,7 +153,9 @@ justify-content: flex-start;
   list-style: none;
   padding: 0;
 }
-
+.about-photo-and-text-container {
+  margin-bottom: 32px;
+}
 .about-skills-item {
   padding: 12px 24px;
   border-radius: 50px;
@@ -163,7 +167,7 @@ justify-content: flex-start;
 }
 
 .about-skills-item-highlight {
-  background-color: #e74c3c;
+  background-color: var(--common-color);
   color: #ffffff;
   font-weight: bold;
 }
@@ -176,47 +180,47 @@ justify-content: flex-start;
 
 /* Адаптивні стилі */
 @media only screen and (min-width: 768px) {
-  .about-me-section-cont{
-    margin-bottom: 96px;
+  .about-photo-and-text-container {
+    margin-bottom: 64px;
   }
-  
+  .about-me-section-cont {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
   .about-text {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 64px 64px 436px 64px;
   }
-.about-description{
-  
-font-size: 38px;
-line-height: 1.06;
-letter-spacing: -0.04em;
-
-}
+  .about-description {
+    font-size: 38px;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+  }
   .about-photo {
     min-width: 704px;
     height: 700px;
   }
   .about-experience-list {
-
+    margin-bottom: 64px;
     .about-experience-list-element {
-      background-color: #1C1D20;
+      background-color: #1c1d20;
       border: none;
       border-bottom: 1px solid rgba(250, 250, 250, 0.2);
       padding-bottom: 31px;
       margin-bottom: 32px;
-      
     }
   }
-.about-experience-list-text{
-  padding-top: 8px;
-}
+  .about-experience-list-text {
+    padding-top: 8px;
+  }
   .about-experience-list .ac .ac-trigger {
     width: 40px;
     height: 40px;
-    
   }
- 
+
   .about-info {
     font-size: 16px;
   }
@@ -232,33 +236,32 @@ letter-spacing: -0.04em;
 }
 
 @media only screen and (min-width: 1440px) {
-
-  .about-me-section-cont{
-    margin-bottom: 164px;
+  .about-me-section-cont {
+    padding-top: 96px;
+    padding-bottom: 164px;
   }
-  
+  .about-experience-list {
+    margin-bottom: 96px;
+  }
 
-  .about-photo-and-text-container{
+  .about-photo-and-text-container {
+    margin-bottom: 96px;
     display: flex;
     gap: 16px;
   }
 
-
   .about-text {
     max-width: 680px;
     max-height: 700px;
-    padding: 64px 64px 436px 64px;
+    padding-bottom: 436px;
     margin: 0;
-   
   }
   .about-description {
     letter-spacing: -0.06em;
   }
-.about-description{
-  letter-spacing: -0.06em;
-}
   .about-photo {
     max-width: 680px;
+    margin: 0;
   }
 
   .about-info {
@@ -268,9 +271,7 @@ letter-spacing: -0.04em;
   .about-skills-list {
     justify-content: flex-start;
   }
-  .about-experience-list-element .ac-panel{
-
-padding: 8px 68px 31px 696px;
-
+  .about-experience-list-element .ac-panel {
+    padding: 8px 68px 31px 696px;
   }
 }
