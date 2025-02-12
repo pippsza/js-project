@@ -1,0 +1,117 @@
+.ac{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ac .ac-trigger {
+    padding: 0;
+}
+
+.ac .ac-trigger::after {
+    content: none;
+}
+
+.about-experience-list {
+ padding-bottom: 32px;
+}
+
+.about-experience-item {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    padding: 20px 0 ;
+}
+
+.about-experience-item .about-experience-trigger{
+    display:flex;
+    justify-content: space-between;
+}
+
+.about-experience-header {
+    color: rgba(250, 250, 250, 0.4);
+    /* padding-bottom: 16px; */
+}
+
+.about-experience-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-items: flex-start;
+    color: #fafafa;
+}
+
+.about-experience-text { 
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.5;
+    margin: 8px 0 2px 0;
+}
+
+.about-experience-text.text-margin{
+    margin-bottom: 24px;
+}
+
+.about-experience-icon {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    fill: none;
+    stroke: #fafafa;
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    transition: transform 550ms ease-in-out;
+}
+
+.is-active .about-experience-icon {
+    transform: rotate(-540deg);
+}
+
+.about-experience-svg-arrow {
+    transform: scale(0.6);
+    transform-origin: center;
+}
+
+@media screen and (min-width: 768px){
+.about-experience-list {
+    padding-bottom: 64px;
+}
+.about-experience-item {
+    padding: 32px 0;
+}
+
+.about-experience-text.text-justufy {
+    text-align: justify;
+}
+
+.about-experience-text.text-margin {
+    margin-bottom: 8px;
+}
+}
+
+@media screen and (min-width: 1440px){
+.about-experience-list {
+    padding-bottom: 96px;
+}
+.about-experience-panel {
+    align-items: flex-end;
+}
+
+.about-experience-text {
+    width: 612px;
+    margin-right: 68px;
+}
+
+.about-experience-text.text-justufy {
+    text-align: left;
+}
+.about-experience-text.text-margin{
+    margin-bottom: 24px;
+}
+}
+
+

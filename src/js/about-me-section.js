@@ -3,8 +3,8 @@ import Swiper from 'swiper';
 
 // акордеон
 document.addEventListener('DOMContentLoaded', function () {
-  new Accordion('#accordion-container', {
-    duration: 200,
+  new Accordion('.about-experience-list', {
+    duration: 700,
     showMultiple: false,
     openOnInit: [0],
   });
