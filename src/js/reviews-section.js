@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function setEqualHeight() {
-    const reviewItems = document.querySelectorAll('.swiper-slide');
+    const reviewItems = document.querySelectorAll('.reviews-slide');
     let maxHeight = 0;
 
     reviewItems.forEach(item => {
