@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const response = await axios.get(
         'https://portfolio-js.b.goit.study/api/reviews'
       );
-      const reviewsList = document.querySelector('.swiper-wrapper');
+      const reviewsList = document.querySelector('.reviews-wrapper');
       const reviews = response.data;
 
       if (reviews.length > 0) {
