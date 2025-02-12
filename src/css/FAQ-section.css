@@ -1,12 +1,4 @@
-@import 'accordion-js/dist/accordion.min.css';
-.ac {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-.ac .ac-trigger::after {
-  content: none;
-}
+/* @import 'accordion-js/dist/accordion.min.css'; */
 .faq-section {
   padding-bottom: 64px;
 }
