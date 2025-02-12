@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function setEqualHeight() {
-    const reviewItems = document.querySelectorAll('.swiper-slide');
+    const reviewItems = document.querySelectorAll('.reviews-slide');
     let maxHeight = 0;
 
     reviewItems.forEach(item => {
@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
       maxHeight = Math.max(maxHeight, item.offsetHeight);
     });
 
-    // reviewItems.forEach(item => {
-    //   item.style.height = `${maxHeight}px`;
-    // });
+    reviewItems.forEach(item => {
+      item.style.height = `${maxHeight}px`;
+    });
   }
 
   swiper.on('init', () => {
