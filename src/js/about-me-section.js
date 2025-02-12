@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const swiper = new Swiper(swiperContainer, {
     spaceBetween: 0,
-    slidesPerView: 2,
+    
     loop: true,
     modules: [Navigation, Keyboard, Mousewheel],
     navigation: {
@@ -77,11 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // прокручування
   swiper.on('slideChange', () => {
-    document.querySelectorAll('.about-swiper-slide').forEach(slide => {
+    // Видаляємо клас active з усіх слайдів
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
       slide.classList.remove('active');
     });
-
+  
+    // Додаємо клас active тільки на поточний слайд
     const activeSlide = swiper.slides[swiper.activeIndex];
+  
     if (activeSlide) {
       activeSlide.classList.add('active');
     }
