@@ -90,3 +90,34 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+function updateSlideSize() {
+  const slides = document.querySelectorAll('.swiper-slide');
+  const cover = document.querySelector('.swiper-slide-cover');
+  const screenWidth = window.innerWidth;
+
+  slides.forEach(slide => {
+    if (screenWidth <= 375) {
+      const width = slide.offsetWidth;
+      slide.style.height = width + 'px'; // Висота = ширина
+    } else if (screenWidth > 375 && screenWidth <= 767) {
+      slide.style.height = '130px'; // Висота 130px
+    } else {
+      slide.style.height = '200px'; // Висота 200px
+    }
+  });
+
+  if (cover) {
+    const firstSlide = slides[0]; // Беремо перший слайд для розрахунку
+    if (screenWidth <= 375) {
+      cover.style.height = firstSlide.offsetWidth + 'px'; // Висота як у слайда
+    } else if (screenWidth > 375 && screenWidth <= 767) {
+      cover.style.height = '130px';
+    } else {
+      cover.style.height = '200px';
+    }
+  }
+}
+
+// Викликаємо при зміні розміру
+window.addEventListener('resize', updateSlideSize);
+updateSlideSize();
