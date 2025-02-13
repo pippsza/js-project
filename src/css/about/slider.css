@@ -1,18 +1,19 @@
 .about-slider {
   position: relative;
 }
+
 .swiper-slide-cover {
   position: absolute; /* Абсолютне позиціювання */
   top: 0; /* Верхній край */
   right: 0; /* Правий край */
-  height: 130px; /* Розміри, які перекривають півколо */
+  height: 100%; /* Розміри, які перекривають півколо */
   width: 83px; /* Розміри, які перекривають півколо */
   background-color: #1c1d20;
   z-index: 2;
 }
 .about-slider .about-wrapper{
   width: 260px;
-  height: 130px;
+  
   .swiper-slide{
     max-width: 130px;
     
@@ -21,6 +22,8 @@
 .about-slider.swiper {
   --swiper-navigation-size: 28px;
   --swiper-navigation-sides-offset: 28px;
+  max-width: 260px;
+  margin-left: 0;
   padding-right: 83px;
 
  
@@ -85,12 +88,13 @@
 @media only screen and (min-width: 768px) {
   .swiper-slide-cover {
     height: 200px; /* Розміри, які перекривають півколо */
-    width: 168px; /* Розміри, які перекривають півколо */
+    width: 96px; /* Розміри, які перекривають півколо */
   }
   .about-slider.swiper {
     --swiper-navigation-size: 28px;
     --swiper-navigation-sides-offset: 28px;
-    padding-right: 83px;
+   margin-left: 0;
+   padding-right: 96px;
     position: relative;
   }
 
@@ -122,12 +126,14 @@
       height: 200px;
     }
   }
-  
+  .about-slider.swiper{
+max-width: 600px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .swiper-slide-cover {
     height: 200px; /* Розміри, які перекривають півколо */
-    width: 176px; /* Розміри, які перекривають півколо */
+    width: 110px; /* Розміри, які перекривають півколо */
   }
   .about-slider.swiper {
     max-width: 1312px;
@@ -135,7 +141,8 @@
     --swiper-navigation-size: 40px;
   }
 
-  .about-swiper-list {
+  .about-slider.swiper {
     max-width: 1200px;
+   
   }
 }

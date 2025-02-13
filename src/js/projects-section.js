@@ -91,8 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     prevTranslate = -currentSlide * sliderWrapper.clientWidth;
   });
 
-  
-
   sliderWrapper.addEventListener('touchstart', event => {
     startX = event.touches[0].clientX;
   });

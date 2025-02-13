@@ -8,6 +8,7 @@
 .page-header.scrolled {
   position: fixed;
   border-radius: 20px;
+  padding: 10px;
   /* border: 1px rgba(255, 255, 255, 0.295) solid;
   background: rgba(255, 255, 255, 0.123); */
   /* Прозорий білий */
@@ -49,7 +50,6 @@
   padding: 0;
   stroke: #fafafa;
 }
-
 .burger-icon {
   z-index: 99999999999;
 }
