@@ -21,14 +21,12 @@ window.addEventListener('scroll', () => {
 buttonMenu.addEventListener('click', () => {
   const isOpen = dropdownMenu.classList.contains('show');
   dropdownMenu.classList.toggle('show');
-  document.body.classList.toggle('no-scroll', !isOpen);
 });
 
 // Закриття випадаючого меню при кліку на посилання
 linksHeaderMenu.forEach(link => {
   link.addEventListener('click', () => {
     dropdownMenu.classList.remove('show');
-    document.body.classList.remove('no-scroll');
   });
 });
 
