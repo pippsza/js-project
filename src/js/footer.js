@@ -19,8 +19,8 @@ emailInput.addEventListener('input', function () {
   errorMessage.classList.toggle('show', !isValid);
 
   if (!emailInput.value) {
-    successMessage.style.display = 'none';
-    errorMessage.style.display = 'none';
+    successMessage.classList.remove('show');
+    errorMessage.classList.remove('show');
     emailInput.classList.remove('valid', 'invalid');
   }
 });
@@ -90,8 +90,8 @@ function closeModal() {
 
 function resetValidation() {
   emailInput.classList.remove('valid', 'invalid');
-  successMessage.style.display = 'none';
-  errorMessage.style.display = 'none';
+  successMessage.classList.remove('show');
+  errorMessage.classList.remove('show');
 }
 
 closeButtonModal.addEventListener('click', closeModal);

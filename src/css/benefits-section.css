@@ -8,7 +8,7 @@
 }
 
 .benefits-container {
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 /* ul,
 ol {
@@ -105,7 +105,7 @@ ol {
 /* tablet version */
 @media screen and (min-width: 768px) {
   .benefits-container {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
   .benefits-list {
     display: flex;
@@ -121,7 +121,7 @@ ol {
 
 @media screen and (min-width: 1440px) {
   .benefits-container {
-    margin-bottom: 164px;
+    padding-bottom: 164px;
   }
   .benefits {
     display: flex;
@@ -137,6 +137,7 @@ ol {
 
   .benefits-list {
     flex-wrap: wrap;
+    margin-bottom: 64px;
   }
 
   .benefits-item {
