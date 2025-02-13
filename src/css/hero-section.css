@@ -46,6 +46,7 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 100%;
+
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
@@ -177,6 +178,7 @@
     border-color: white;
   }
   .hero-h {
+    padding-left: 178px;
     margin-bottom: 243px;
   }
   .hero-section::before {
