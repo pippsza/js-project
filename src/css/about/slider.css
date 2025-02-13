@@ -14,7 +14,8 @@
   width: 260px;
   height: 130px;
   .swiper-slide{
-    height: 126px;
+    max-width: 130px;
+    
   }
 }
 .about-slider.swiper {
@@ -25,7 +26,7 @@
  
 
   .about-wrapper.swiper-wrapper .swiper-slide {
-    /* flex: 1 1 auto; */
+    flex: 1 1 auto;
     flex-shrink: 0;
    
     width: 126px;
@@ -84,16 +85,17 @@
 @media only screen and (min-width: 768px) {
   .swiper-slide-cover {
     height: 200px; /* Розміри, які перекривають півколо */
-    width: 104px; /* Розміри, які перекривають півколо */
+    width: 168px; /* Розміри, які перекривають півколо */
   }
   .about-slider.swiper {
     --swiper-navigation-size: 28px;
     --swiper-navigation-sides-offset: 28px;
     padding-right: 83px;
+    position: relative;
   }
 
   .swiper-wrapper.swiper {
-    max-width: 704px;
+    width: 704px;
     padding-right: 83px;
     --swiper-navigation-size: 40px;
     --swiper-navigation-sides-offset: 40px;
@@ -116,7 +118,7 @@
     width: 600px;
     height: 200px;
     .swiper-slide {
-      width: 200px;
+      max-width: 200px;
       height: 200px;
     }
   }
@@ -125,7 +127,7 @@
 @media only screen and (min-width: 1440px) {
   .swiper-slide-cover {
     height: 200px; /* Розміри, які перекривають півколо */
-    width: 112px; /* Розміри, які перекривають півколо */
+    width: 176px; /* Розміри, які перекривають півколо */
   }
   .about-slider.swiper {
     max-width: 1312px;
