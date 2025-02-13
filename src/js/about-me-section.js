@@ -90,34 +90,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-function updateSlideSize() {
-  const slides = document.querySelectorAll('.swiper-slide');
-  const cover = document.querySelector('.swiper-slide-cover');
+function updateMySliderHeight() {
+  // Вибираємо тільки твій Swiper-контейнер
+  const mySwiperContainer = document.querySelector('.about-slider');
+  if (!mySwiperContainer) return;
+
+  // Вибираємо тільки слайди всередині твого Swiper-а
+  const slides = mySwiperContainer.querySelectorAll('.swiper-slide');
   const screenWidth = window.innerWidth;
 
   slides.forEach(slide => {
     if (screenWidth <= 375) {
       const width = slide.offsetWidth;
-      slide.style.height = width + 'px'; // Висота = ширина
+      slide.style.height = width + 'px'; // Висота = ширина (квадрат)
     } else if (screenWidth > 375 && screenWidth <= 767) {
-      slide.style.height = '130px'; // Висота 130px
+      slide.style.height = '130px'; // Фіксована висота 130px
     } else {
-      slide.style.height = '200px'; // Висота 200px
+      slide.style.height = '200px'; // Фіксована висота 200px
     }
   });
-
-  if (cover) {
-    const firstSlide = slides[0]; // Беремо перший слайд для розрахунку
-    if (screenWidth <= 375) {
-      cover.style.height = firstSlide.offsetWidth + 'px'; // Висота як у слайда
-    } else if (screenWidth > 375 && screenWidth <= 767) {
-      cover.style.height = '130px';
-    } else {
-      cover.style.height = '200px';
-    }
-  }
 }
 
-// Викликаємо при зміні розміру
-window.addEventListener('resize', updateSlideSize);
-updateSlideSize();
+// Викликаємо функцію тільки для твого Swiper-а при завантаженні та зміні розміру
+window.addEventListener('resize', updateMySliderHeight);
+updateMySliderHeight();
+
