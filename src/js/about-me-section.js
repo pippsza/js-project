@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 function updateMySliderHeight() {
-  // Вибираємо тільки твій Swiper-контейнер
+  
   const mySwiperContainer = document.querySelector('.about-slider');
   if (!mySwiperContainer) return;
 
