@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
       maxHeight = Math.max(maxHeight, item.offsetHeight);
     });
 
-    reviewItems.forEach(item => {
-      item.style.height = `${maxHeight}px`;
-    });
+    // reviewItems.forEach(item => {
+    //   item.style.height = `${maxHeight}px`;
+    // });
   }
 
   swiper.on('init', () => {
