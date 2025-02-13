@@ -43,19 +43,20 @@
 .about-highlight-red {
   color: var(--common-color);
 }
-
+.about-photo img {
+  width: 100%;
+}
 .about-photo {
   width: 100%;
-  
+
   height: auto;
-  display: flex;
+  /* display: flex; */
   margin-bottom: 32px;
   justify-content: center;
   align-items: center;
 }
 
 .about-photo img {
-  
   height: 100%;
   border-radius: 24px;
   object-fit: cover;
@@ -70,7 +71,7 @@
   border: none;
 }
 
-.about-icon-reg{
+.about-icon-reg {
   box-sizing: border-box;
   display: block;
   flex-shrink: 0;
@@ -80,12 +81,11 @@
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
   transition: transform 550ms ease-in-out;
-  
 }
-.is-active .about-icon-reg{
+.is-active .about-icon-reg {
   transform: rotate(540deg);
 }
-.about-icon-arrow{
+.about-icon-arrow {
   transform: scale(0.6);
   transform-origin: center;
 }
@@ -191,11 +191,11 @@
 
 /* Адаптивні стилі */
 @media only screen and (min-width: 768px) {
-  .about-icon-reg{
+  .about-icon-reg {
     width: 40px;
     height: 40px;
   }
-  
+
   .about-photo-and-text-container {
     margin-bottom: 64px;
   }
@@ -232,7 +232,6 @@
   .about-experience-list-text {
     padding-top: 8px;
   }
- 
 
   .about-info {
     font-size: 16px;
@@ -249,10 +248,10 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .about-photo{
+  .about-photo {
     min-width: 680px;
   }
-  
+
   .about-me-section-cont {
     padding-top: 96px;
     padding-bottom: 164px;
