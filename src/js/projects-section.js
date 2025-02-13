@@ -1,20 +1,43 @@
-import '/main';
+import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/bundle';
+
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const sliderWrapper = document.querySelector('.slide-prj');
-  const slides = document.querySelectorAll('.prj-swiper-slide');
   const nextButton = document.querySelector('.button-next-prj');
   const prevButton = document.querySelector('.button-prev-prj');
   const projectLinks = document.querySelectorAll('.see-project');
 
-  let currentSlide = 0;
-  const totalSlides = slides.length;
+  const swiper = new Swiper('.prj-slider', {
 
-  const updateSliderPosition = () => {
+    modules: [Navigation, Keyboard, Mousewheel],
+    loop: false,
+    navigation: {
+      nextEl: '.button-next-prj',
+      prevEl: '.button-prev-prj',
+    },
+    autoplay: {
+      delay: 200,
+      disableOnInteraction: false,
+    },
+    mousewheel: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+    on: {
+      slideChange: () => {
+        updateLinks(swiper);
+      }
+    },
+  
+  
+  });
+  const updateSliderPosition = (swiper) => {
     sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
   };
 
@@ -25,91 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateLinks = () => {
     projectLinks.forEach((link, index) => {
-      link.setAttribute('tabindex', index === currentSlide ? '0' : '-1');
+     if (index === swiper.activeIndex) {
+        link.removeAttribute('tabindex');
+        link.style.pointerEvents = 'auto';
+      } else {
+        link.setAttribute('tabindex', '-1');
+        link.style.pointerEvents = 'none';
+      }
     });
   };
-
-  const goToNextSlide = () => {
-    if (currentSlide < totalSlides - 1) {
-      currentSlide++;
-      updateSliderPosition();
-      updateButtons();
-      updateLinks();
-    }
-  };
-
-  const goToPrevSlide = () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateSliderPosition();
-      updateButtons();
-      updateLinks();
-    }
-  };
-
-  nextButton.addEventListener('click', goToNextSlide);
-  prevButton.addEventListener('click', goToPrevSlide);
-
-  document.addEventListener('keydown', event => {
-    if (event.key === 'ArrowRight') goToNextSlide();
-    if (event.key === 'ArrowLeft') goToPrevSlide();
-  });
-
-  let startX = 0;
-  let isDragging = false;
-  let currentTranslate = 0;
-  let prevTranslate = 0;
-  let endX = 0;
-
-  sliderWrapper.addEventListener('mousedown', event => {
-    isDragging = true;
-    startX = event.clientX;
-    sliderWrapper.style.transition = 'none';
-  });
-
-  document.addEventListener('mousemove', event => {
-    if (!isDragging) return;
-    const currentX = event.clientX;
-    const moveX = currentX - startX;
-    currentTranslate = prevTranslate + moveX;
-    sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
-  });
-
-  document.addEventListener('mouseup', event => {
-    if (!isDragging) return;
-    isDragging = false;
-    sliderWrapper.style.transition = 'transform 0.3s ease-out';
-
-    const moveDistance = event.clientX - startX;
-    if (moveDistance < -50 && currentSlide < totalSlides - 1) {
-      goToNextSlide();
-    } else if (moveDistance > 50 && currentSlide > 0) {
-      goToPrevSlide();
-    } else {
-      updateSliderPosition();
-    }
-    prevTranslate = -currentSlide * sliderWrapper.clientWidth;
-  });
-
-  
-
-  sliderWrapper.addEventListener('touchstart', event => {
-    startX = event.touches[0].clientX;
-  });
-
-  sliderWrapper.addEventListener('touchmove', event => {
-    endX = event.touches[0].clientX;
-  });
-
-  sliderWrapper.addEventListener('touchend', () => {
-    if (startX > endX + 50) {
-      goToNextSlide();
-    } else if (startX < endX - 50) {
-      goToPrevSlide();
-    }
-  });
-
-  updateSliderPosition();
+  swiper();
   updateButtons();
   updateLinks();
 });
