@@ -49,6 +49,10 @@
   padding: 0;
   stroke: #fafafa;
 }
+
+.burger-icon {
+  z-index: 99999999999;
+}
 .logo-nav {
   cursor: pointer;
 }
