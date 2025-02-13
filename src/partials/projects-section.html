@@ -3,9 +3,9 @@
     <h2 class="title-prj">Projects</h2>
     <div class="prj-swiper-container prj">
       <div class="prj-swiper sample-slider prj-slider">
-        <ul class="prj-swiper-wrapper slide-prj">
+        <ul class="prj-swiper-wrapper swiper-wrapper slide-prj">
           <!----------      first-slide   ------------->
-          <li class="prj-swiper-slide">
+          <li class="prj-swiper-slide swiper-slide">
             <ul class="project">
               <li class="project-info">
                 <ul class="tags-prj">
@@ -57,7 +57,7 @@
           </li>
 
           <!----------      second-slide   ------------>
-          <li class="prj-swiper-slide">
+          <li class="prj-swiper-slide swiper-slide">
             <ul class="project">
               <li class="project-info">
                 <ul class="tags-prj">
@@ -108,7 +108,7 @@
           </li>
 
           <!----------      third-slide   -------------->
-          <li class="prj-swiper-slide">
+          <li class="prj-swiper-slide swiper-slide">
             <ul class="project">
               <li class="project-info">
                 <ul class="tags-prj">
@@ -164,12 +164,16 @@
       </div>
 
       <div class="prj-buttons">
-        <button id="prev-prj" class="button-prev-prj">
+        <button
+          id="prev-prj"
+          aria-label="Previous project"
+          class="button-prev-prj"
+        >
           <svg class="icon-prj" width="24" height="24">
             <use xlink:href="/img/svg/all-svg.svg#icon-left-arrow"></use>
           </svg>
         </button>
-        <button id="next-prj" class="button-next-prj">
+        <button id="next-prj" aria-label="Next project" class="button-next-prj">
           <svg class="icon-prj" width="24" height="24">
             <use xlink:href="/img/svg/all-svg.svg#icon-right-arrow"></use>
           </svg>
