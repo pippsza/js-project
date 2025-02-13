@@ -1,4 +1,3 @@
-
 import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,7 +8,6 @@ import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
   const sliderWrapper = document.querySelector('.slide-prj');
-  const slides = document.querySelectorAll('.prj-swiper-slide');
   const nextButton = document.querySelector('.button-next-prj');
   const prevButton = document.querySelector('.button-prev-prj');
   const projectLinks = document.querySelectorAll('.see-project');
@@ -39,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
   });
-
+  const updateSliderPosition = (swiper) => {
+    sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  };
 
   const updateButtons = () => {
     prevButton.disabled = currentSlide === 0;
